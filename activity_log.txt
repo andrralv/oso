@@ -1,0 +1,5 @@
+
+2023-06-14 18:17:22 /Users/andre/pico/games/oso/main.lua.p8
+ rrcrrrrrrrrrrrrr_________
+2023-06-14 19:47:22 /Users/andre/pico/games/oso/main.lua.p8
+ rr_rggggg.........g.........g...
