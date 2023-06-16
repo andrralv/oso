@@ -3,3 +3,91 @@
  rrcrrrrrrrrrrrrr_________
 2023-06-14 19:47:22 /Users/andre/pico/games/oso/main.lua.p8
  rr_rggggg.........g.........g...
+2023-06-15 00:23:08 /Users/andre/pico/games/oso/main.lua.p8
+ ricc..c.........c..crrrrcccccccciccccccrccccc.......cc.........ccccccrccccccic..
+ .......ccri.........rccccrr_cccccricccccrrrccccccccrrccccccc.cccc...ccccc.ccc..c
+ ...cccccccccccrrr__rc..ccccrcccccccccccccccccrcc...crcccccccc.cc....cccccccccrrc
+ cc.........cccccccccccccccccccccccccccccccccrrcrrrrrcccccccccccccccccc.cciiccccc
+ crric.ccccc...c.cccc.c..cccciccrc..rrrrrricrriciccccccccc..ccccccccccccrcc...c..
+ ....cccc.cc.c..cccrrccccccccccrcc..cc.ccccccccccccrrrcrrc..c.........cccc.ccc.cc
+ ccccccccccccccc...ccccc..c.ccccccccccmcc...ccccccccc..cccccccccccccc.ccccccccccr
+ rrrrcc.ccccccccccccccccccccrrccccccrrccc..cccrrrrriccccccc.c....cccccrcccccrrrrr
+ rrccccccccrrrrrcccccc.ccccccccccrrrriccccccccccccccccrrrrcccrrrrrrrrrrcccccccccc
+ crrrc.....ccccccccccccrrrrrcccccccccccccccccrc..ccccc.cccccccrrrrrrccc.cccmmcccc
+ crrrrrriccccc.ccrrrrrrrrccccccccccccrrrrrccc.cccccc.ccccc...cccccc......rrrrrrr_
+ ccccccrrrrrr___cccccccccccrrrc.........cccccccrirrrrccccccccccccccccccccccrrcrrr
+ ccc.........cricrcrcc..ccc.........ccccccrrrcrccccccirr_rc.........crrc..cccccrc
+ crcccrrcc.........mmmmmmmmmm.mmmmmggggggggggggmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmm
+ mmmmmmmmmmmm.mmmmmm.mmmmgggg...ggggggggggggggggggggggggggggggggggggggggg..gggggg
+ ....gggggg..gg.....gggggggcccmmmmmmmmggmgmmgmmmmgggggggggggggggggggggggggggggggg
+ ggggggggggggggmmmmmmmmmmmrccrrcrcr_cmmmccrrrimmmmmmmmmmmmmmmg.........ggmmmrmccc
+ ccc.ccccccccrccccrcccccccccccccrrcrcccccccrrcrccccrrcccccrcc.........cccccccccci
+ ccc....cc.........ccccrrrcrrcrccrcccccccicccccccccccccccccrrc.........cccrccrrc.
+ ...ccrc.ccrccccccrrccccccccccccccccrrrccrrccrccc....c.....c.ccrrrrrcrcrrrcrcrcrc
+ rrrrccricc.........ccrrrrcc.cccrrcccccrcrrrcc.cccccccccc.c.cc..cccccccccccccrrrr
+ rrrrrcc.cccccrccrcc..c...rrcc.........cccc..c.......ccccccccccrccccccccccccccc..
+ cccccccrrcc.........ccc.........c.cccccriccc.cccccrrcccccrrcrccirrrrrrc.........
+ cccccccrcccrrrcc..rrrrcrrccrc.........rrc...crccrrrcrcrcrccrcrcmmmmm.........mmc
+ .c.........c......c.........rrcccccc.cccccirrrcccccccrrrrrc.ccc.ccc...crccrccrcr
+ rrrccccccrcc.cc....cccccrrccrcrrrrrrccccccrcrcc.rrrccccccccccc.ccc......crcrccrc
+ crrccccccccccccccrrrrccrrcrrc.c.cc.ccccccc.cc..c.crrrrrcccrrrc.ccccc...ccccccccc
+ ccccccccrcccccccccccrrrrrrrrrccrcc.ccccccrrrrcciccccccrcc...ccccccccccccccrrcccr
+ ccrrc.ccccccccic.ccccccccicccc...cccc.cciicrrrrrccccc.crcccrccccc.c..rc.........
+ crcccccccccccccccc.........cccrrcccrrccc.c.cccccrrrccccccccrrccccrccrrrrrr_rrccr
+ irc.cc...ccccccc.ccrrrrrrcrrrrrrrrrrrcccc.ccccccrccriccc..ccccccrrrrrrricccccrrr
+ rrr_ccrrcc..cc........cccc.cccrrrrcccccccrc.........rrrrrrc.cc.........cc.......
+ ..c....mmmmmmmmmrrrrrrrrrrrrrrrrrrrrm
+2023-06-15 17:27:43 /Users/andre/pico/games/oso/main.lua.p8
+ rrrrrrrccc..ccccccccccccc..cc.cccccccrrrrcrrircrriiccccccccc.cccccc.........ccc.
+ .......cc.rcrcccccccrcrc..rccccccccccrcccrrricc.c.........c
+2023-06-15 21:08:43 /Users/andre/pico/games/oso/main.lua.p8
+ riccccrrc...cccccc.cccccccccccccccccccrrccrrrrrrcrrc...cc.ccccccc.ccccccccccccc.
+ ccc.cc.ccccccccrrccccccccccc.crrrrrrrrcccrrrrrrc.....ccccccrrccccccrrrrrrrcc.ccr
+ rrrrrrrrrccccccrrrrcccccrccccccccccccccrrccc.........cg.gggggggggggggggggggggggg
+ ggggggggggggggggggggggggggggggcrcrccrccrrrcccccccccc.ccc.ccc.ccccccccccccccrrrrr
+ cccrcccmmmcc.cc.........ccccccccrccccccccccrrrcccccccccccccc.........ccccccccccc
+ cccmmggggggggggggggggggcccccc....cccccccccccccccccccccccccccrrrcccccccrccccccccc
+ cccccc.........ccc.ccccccccccccccciccccccccccrcrccrcrrcccccccccccccccccccrrccrcc
+ cccccccrirccrrcccrrrrrrcrr__cc.ccccc........ccccccccccccccccc.ccccc.........ccc.
+ ..cccccccccccccccccccccccccrrrcccc.ccc..ccccrrrccccccccccciicrrrrccrccccc.cccccc
+ cccccccccrrcccccrrrrcc.........cccccc...c.cc.crcccc......crr_rcccrrccccrcrccricr
+ cccrrccrr______cccricc.........crrcccccccrccrrcrrcccc......cc.cccccc.ccccccccccc
+ cccccccccccrccccrrrcccccrrrrcccccccccccrccrrccccrcicrrrrrrrrrrrrmmmmssssssssssss
+ sssssssssssssscccccrrcccrrrrrccccrrrccccccrrrrc.........c.rrrrrrrrrrrrrrrcccc.c.
+ ccc.ccccccccccc
+2023-06-15 22:28:41 /Users/andre/pico/games/oso/main.lua.p8
+ rrrrrrrrrcrric.........cc....rrrrrrrc.......cc........ccmgggggggggg........g....
+ .....gggggggggggggigggggiiiiiii..iiiii.gggggggggggggggg.........g......gg.gggggg
+ gggg.ggg.........g.........ggggggggggggggggggggggggggggggggggggggggggggggggggggg
+ gggggggg.ggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggg
+ gggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggg
+ gggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggg
+ gggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggg
+ iigggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggg
+ gggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggg
+ gggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggg
+ gggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggg
+ gggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggg
+ gggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggg
+ gggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggg
+ .ggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggg
+ ggggggggggggggggggg.gggggggggggggggggggggggggggggggggg......gggggggggggggggg....
+ .....ggggggggggggggggggggggggggggggggggggggggggggggggggggggg.ggggggggggggggggggg
+ ggggggggggggggggggggggggggggggggggggcmmmmmmmmmccccccccccc.cc.c.ccc.ccccccccccccc
+ mm........mmmccccrccrrcccrcircccirccrcccccccccrrr_rrccr__rr____ccrccccr__r__rctc
+ rccr____ccccrccicccrmmmcircrccccccr_ccirriiiciirccccsmmccccrcrccicrccrccmccccrcr
+ _ccccccrr_____rrrrrrrrrr______r_________cgggggg......ggggg.gggggg.gg.ggggggggggg
+ gggggggggggggggggggggggggggggggggggggggggg.ggggggggggggggggggggggggggggggggg..gg
+ ggggggggg.ggg.gg..ggggg.....gggggggggggggggggggggggggggggggggggggggggggggggggggg
+ ggggggggg.gcgggggggggggggggggggggggggggggggggggggggggggccmmcccccccccccccmccccccc
+ ccrii.riccccccccri..iccccc.c.ccrrrr_____rrrcmmsgggggggggggrrrrrrrrrrr_rggggggggr
+ rrriggrrrgggggggrrrr____r_gg......cccccccccc.........rrrr_______rr_rrrrrrrrrr__r
+ 
+2023-06-16 03:25:55 /Users/andre/pico/games/oso/main.lua.p8
+ rrr_rrrrrrrcc...cmmmgggggggggggggg..gggggggggggggggggggggggggggggggggggggggggggg
+ gggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggg
+ gggggggggggggggggggggggggggmggggggggggg....ggggggggggggggggggggggggggggggggggggg
+ gggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggg
+ gggggggggggggggg.ggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggg
+ gggggggggg.gggggggggggggccccccccccccmccrccccccccrrrrrrrrrsmgggrrrrrr___ggggggggr
+ 
