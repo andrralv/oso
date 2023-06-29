@@ -485,16 +485,12 @@ function print_dialog()
 			   end
 			  end
 		  end
-		  if #_dialog == 16 then
-			for l=1,4 do
-			   print(game.dialog_msg[l],game.frames.x,100+(l*6),7)
-			  end
-			  if btn(❎) then
-			   for l=5,8 do
-			    print(game.dialog_msg[l],game.frames.x,100+(l*6),7)
-			   end
-			  end
-		  end
+		  -- logic goes here
+		 for l=1,#game.dialog_msg do
+		  print(game.dialog_msg[l],(game.frames.x-1)*128,(game.frames.y*128-30)+(l*6),7)
+		 end
+		 print("❎",((game.frames.x-1)*128)+120,game.frames.y*128-10,animations.x_btn[flr(clock)])
+		  --
 			else
 		 -- a
 		 for l=1,#game.dialog_msg do
