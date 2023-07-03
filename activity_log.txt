@@ -194,3 +194,11 @@
  .ssssssssssssssssssssssssssssttttttssstttttsssssssssttssssssssssssttttsssssstttr
  tsssssssrrrrrrstssssssssssssssssssssssssssttrrrrrrr__rri.rrrrrrrtrrrrrrrrrrrrrr_
  ________ri
+2023-07-03 18:46:48 /Users/andre/pico/games/oso/main.lua.p8
+ rrrrrrcccrrrccc...ccc.cccccccccccccccccrrrrcccccccccccccc.crrrc.......ccc...cccc
+ cccccc....ccccccccccccccccccccccccccccccccccrrrrcccccrrrrricccccccccc.........cc
+ ccrrrrrrrrrcccc.rccrrrrrrrrc...cccccc...c.cc.c........cc.........c.cc....crrcc..
+ ......cccc.........c.........ccccc.........cccc.....cc.cccccc.ccccccc.cccccccccc
+ cccccc.........cccccc.........c.........ccc.........ccc.........cccc....cccccc..
+ ....cccccccccccccccicccccii..ccccc.......ccccc.........ccccc...c.........ccccccc
+ 

@@ -1066,23 +1066,9 @@ end
 
 function change_random_character()
  characters = {"oso", "lechu", "viento", "gaturri"}
- character_sprites = {}
- character_sprites.oso = 1
- character_sprites.lechu = 7
- character_sprites.viento = 23
- character_sprites.gaturri = 39
- --
- character_animations = {}
- character_animations.oso = {10,42}
- character_animations.lechu = {14,46}
- character_animations.viento = {76,108}
- character_animations.gaturri = {78,110}
- 
  randnum = 1+ flr(rnd(4))
+ debug.active=true
  name=tostr(characters[randnum])
- pl.name = name
- pl.k = character_sprites[name]
- pl.animation = character_animations[name]
 end
 __gfx__
 c888cccc0000000000000000333333331111111166666666ffffffff000000023333331111333333000000001100000033333311133333330000010000000000
