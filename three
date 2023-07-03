@@ -1,0 +1,231 @@
+-- spawning
+
+function spawn_npcs()
+ 	-- make npcs
+	pablo = make_actor(8,7,4)
+	pablo.name="pablo"
+	pablo.role="npc"
+	pablo.bigsprite=true
+	pablo.can_move=false
+	pablo.animation={8,40}
+	pablo.can_talk=true
+	pablo.sound=07
+	pablo.dialog={"cada animalito tiene sus", "virtudes ...y sus defectos", "mae por cierto"}
+	pablo.dialog_2={"hable mas veces con la gente", "ahora todo mundo esta", "con ese jueputa celular"}
+	pablo.dialog_7={"hay un mundo secreto", "debes presionar un boton", "solo los gatos pueden entrar"}
+	
+	tabash = make_actor(134,54,21)
+	tabash.name="tabash"
+	tabash.role="npc"
+	tabash.bigsprite=true
+	tabash.can_move=false
+	tabash.animation={134,166}
+	tabash.can_talk=true
+	tabash.sound=07
+	tabash.dialog={"que? cual golfin", "yo solo estoy aca, no me meta", "en eso...en realidad", "se me varo el carro"}
+	tabash.dialog_2={"que pijeado, el otro dia", "me sone que era chiquitillo", "y hablaba con una palmera", "en una isla desierta"}
+	
+	fuan = make_actor(192,20,6)
+	fuan.name="fuan"
+	fuan.role="npc"
+	fuan.bigsprite=true
+	fuan.animation={192,224}
+	fuan.can_move=false
+	fuan.can_talk=true
+	fuan.sound=08
+	fuan.dialog={"el pollito sabe muy rico", "pero te puede hacer mal.."}
+	fuan.dialog_2={"necesitas el chidori rojo", "para derrotar a malfin", "abraza la palmera"}
+	
+	andre = make_actor(65,42,18)
+	andre.name="andre"
+	andre.role="npc"
+	andre.bigsprite=true
+	andre.animation={65,97}
+	andre.can_move=false
+	andre.can_talk=true
+	andre.sound=08
+	andre.dialog={"algo le pasa a golfin! aa", "no para de llorar …"}
+	andre.dialog_2={"a malfin no se le puede", "hacer dano con un chidori", "normal", "necesitas algo especial"}
+	
+	andrea = make_actor(74,102,25)
+	andrea.name="andrea"
+	andrea.role="npc"
+	andrea.bigsprite=true
+	andrea.can_move=false
+	andrea.can_talk=true
+	andrea.sound=08
+	andrea.dialog={"golfin? oh no", "la llave de la casa esta", "ahi adentro", "...por ahi"}
+	andrea.dialog_2={"ahh si, yo le ayudo", "con este treat", "se puede hacer grande", "o chiquitillo"}
+	
+	golfin = make_actor(65,38.5,8)
+	golfin.name="golfin"
+	golfin.role="npc"
+	golfin.biggersprite=true
+	golfin.animation={198,202}
+	golfin.can_move=false
+	golfin.can_talk=true
+	golfin.sound=10
+	golfin.dialog={"█★█⬅️⌂⬇️♪⬅️ !", "⌂⬅️😐♪웃⌂🐱ˇ", "ˇ웃♥●웃⌂♥⌂★██@##!", "$%^▤⬆️●█!!!"}
+	golfin.special_dialog={"mae ese hijueputa malfin", "le tira uno los golpes ユか◆め", "por tantiar digo yo!", "los tiro asi 🐱◆", "y digo mae lo tengo que pegar", "mae y no le doyユ", "el hijueputa ese es magico", "bicho", "hijueputa", "malparido igual que usted", "pasa en una brincadera el hijueputa", "pibibibibibibib", "mae", "mi hermano", "ahhh ..picha", "suave para calmarme"}
+	golfin.special_dialog_2={"..ya ahora si", "mae es que estaba jugando", "smash con mi hermanillo", "y se puso a fumar espiral", "se encamoto y saco un chopo", "..la casa esta cerrada con llave", "en el agua deje un flotador", "talvez en la isla", "alguien pueda ayudar", "..viento puede ir", "malparido malfin", "..", "mae", "jueputa susto ah?", ".................esperon", "..........esperon"}
+	
+	tabash_c = make_actor(130,56,18)
+	tabash_c.name="carro"
+	tabash_c.role="npc"
+	tabash_c.biggersprite=true
+	tabash_c.can_move=false
+	tabash_c.can_talk=false
+
+	crab = make_actor(38,11.5,1.5)
+	crab.name="crab"
+	crab.role="npc"
+	crab.can_move=false
+	crab.can_talk=true
+	crab.sound=09
+	crab.dialog={"no le haga caso a ese mae", "...el esconde algo..."}
+	crab.dialog_2={"los perrillos chiquitillos", "no pueden nadar", "clic clac.."}
+	
+	magician = make_actor(142,119.5,9)
+	magician.name="naranita"
+	magician.role="npc"
+	magician.can_move=true
+	magician.bigsprite=true
+	magician.animation={142,174}
+	magician.can_talk=true
+	magician.sound=09
+	magician.dialog={"aca puedes tomar relevo", "con un amigo"}
+	magician.dialog_2={"algunas puertas solo", "se puede entrar chiquitillo", "otras no importan"}
+
+	magician_a = make_actor(142,68,9)
+	magician_a.name="naranita_2"
+	magician_a.role="npc"
+	magician_a.can_move=true
+	magician_a.bigsprite=true
+	magician_a.animation={142,174}
+	magician_a.can_talk=true
+	magician_a.sound=09
+	magician_a.dialog={"cambie de bicho conmigo", "solo empujeme"}
+	
+	magician_b = make_actor(138,74,9)
+	magician_b.name="bubibul"
+	magician_b.role="npc"
+	magician_b.can_move=true
+	magician_b.bigsprite=true
+	magician_b.animation={138,138}
+	magician_b.can_talk=true
+	magician_b.sound=09
+	magician_b.dialog={"no nos conocemos", "me llamo bubibul", "empujeme para cambiar de tamano"}
+	
+ lechu = make_actor(07,116,4)
+	lechu.name="lechu"
+	lechu.role="character"
+	lechu.animation={14,46}
+	lechu.can_talk=true
+	lechu.can_move=false
+	lechu.dialog={"lechu", "+1 atq", "skill: comer piedras"}
+	
+	viento = make_actor(23,120,4)
+	viento.name="viento"
+	viento.role="character"
+	viento.animation={76,108}
+	viento.can_talk=true
+	viento.can_move=false
+	viento.dialog={"viento", "-3 velocidad", "skill: nadar"}
+	
+	
+	gaturri = make_actor(39,124,4)
+	gaturri.name="gaturri"
+	gaturri.role="character"
+	gaturri.animation={78,110}
+	gaturri.can_talk=true
+	gaturri.can_move=false
+	gaturri.dialog={"gaturri", "-2 defensa", "skill: chidori"}
+	
+	casa = make_actor(55,1,10)
+	casa.name="casa"
+	casa.role="npc"
+	casa.can_move=false
+	casa.can_talk=true
+	casa.dialog={"habla conmigo otra vez", "para empezar de nuevo"}
+
+		-- make player
+		
+	oso = {}
+	oso.k = 1
+	oso.name="oso"
+	oso.animation={10,42}
+	oso.can_talk=true
+	oso.dialog={"oso", "-3 energia", "skill: ???"}
+	
+	--rock1=make_actor(35,30.5,18.5)
+	rock2=make_actor(35,30.5,19.5)
+	rock3=make_actor(35,30.5,20.5)
+ --rock1.can_move=false
+	rock2.can_move=false
+	rock3.can_move=false
+		
+	-- floater
+	floater = make_actor(69,41.5,28.5) 
+	floater.bigsprite=true
+	floater.name="floater"
+	floater.animation={69,101}
+	floater.can_move=false
+	floater.sprites={69,70,85,86}
+	
+	-- balsa
+	balsa = make_actor(110,100.5,19.5) 
+	balsa.bigsprite=true
+	balsa.name="balsa"
+	balsa.can_move=false
+	balsa.can_talk=true
+	balsa.sprites={110,111,125,126}
+	balsa.dialog={"has conseguido la balsa", "...un animal pequeno", "cabe en ella"}
+	
+	passage=make_actor(160,107.5,21.5)
+	passage.bigsprite=true
+	passage.name="passage"
+	passage.can_move=false
+	passage.can_talk=true
+	passage.dialog={"solo los gatos..", "comprenden la realidad", "alterna"}
+	
+	
+		-- key
+	key = make_actor(171,120,22) 
+	key.name="key"
+	key.can_move=false
+	key.can_talk=true
+	key.dialog={"has conseguido la llave", "de la casa de", "golfin"}  
+end
+
+function spawn_enemies()
+	malfin = make_actor(194,105,8)
+	malfin.name="malfin"
+	malfin.role="npc"
+	malfin.biggersprite=true
+	malfin.can_move=true
+	malfin.can_talk=true
+	malfin.sound=10
+	malfin.dialog={"█★█⬅️⌂⬇️♪⬅️ !", "⌂⬅️😐♪웃⌂🐱ˇ", "ˇ웃♥●웃⌂♥⌂★██@##!", "$%^▤⬆️●█!!!"}
+ malfin.special_dialog_2={"..ya ahora si", "mae es que estaba jugando", "smash con mi hermanillo", "y se puso a fumar espiral", "se encamoto y saco un chopo", "y me asuste", "en el agua deje un flotador", "talvez en la isla", "alguien pueda ayudar", "..si", "malparido ese", "...", "mae", "jueputa susto ah?", "...", "phew!"}
+end
+
+function change_random_character()
+ characters = {"oso", "lechu", "viento", "gaturri"}
+ character_sprites = {}
+ character_sprites.oso = 1
+ character_sprites.lechu = 7
+ character_sprites.viento = 23
+ character_sprites.gaturri = 39
+ --
+ character_animations = {}
+ character_animations.oso = {10,42}
+ character_animations.lechu = {14,46}
+ character_animations.viento = {76,108}
+ character_animations.gaturri = {78,110}
+ 
+ randnum = 1+ flr(rnd(4))
+ name=tostr(characters[randnum])
+ pl.name = name
+ pl.k = character_sprites[name]
+ pl.animation = character_animations[name]
+end

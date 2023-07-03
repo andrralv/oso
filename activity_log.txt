@@ -202,3 +202,6 @@
  cccccc.........cccccc.........c.........ccc.........ccc.........cccc....cccccc..
  ....cccccccccccccccicccccii..ccccc.......ccccc.........ccccc...c.........ccccccc
  
+2023-07-03 20:37:00 /Users/andre/pico/games/oso/main.lua.p8
+ rcgg.ggcc...cccccc.cccccccrrrrrrrrrrrrrrcccccc.crrrrrrrrrrrrrmmmmmmmmmmmmmmccccc
+ 

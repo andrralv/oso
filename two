@@ -1,0 +1,335 @@
+-- physics
+
+
+-- for any given point on the
+-- map, true if there is wall
+-- there.
+
+function solid(x, y)
+	-- grab the cel value
+	val=mget(x, y)
+	
+	-- check if flag 1 is set (the
+	-- orange toggle button in the 
+	-- sprite editor)
+	return fget(val, 1)	
+end
+
+function hazard(x, y)
+	val=mget(x, y)
+	return fget(val, 0)	
+end
+
+function warp(x, y)
+	val=mget(x, y)
+	return fget(val, 2)	
+end
+
+function land(x, y)
+	val=mget(x, y)
+	return fget(val, 3)	
+end
+
+-- solid_area
+-- check if a rectangle overlaps
+-- with any walls
+
+--(this version only works for
+--actors less than one tile big)
+
+function solid_area(x,y,w,h)
+	return 
+		solid(x-w,y-h) or
+		solid(x+w,y-h) or
+		solid(x-w,y+h) or
+		solid(x+w,y+h)
+end
+
+function hazard_area(x,y,w,h)
+ is_hazard = 
+		hazard(x-w,y-h) or
+		hazard(x+w,y-h) or
+		hazard(x-w,y+h) or
+		hazard(x+w,y+h)
+		if pl.name=="oso" or pl.name=="lechu" then
+		 pl.can_swim=false
+		end
+		if pl.name=="gaturri" and game.has_balsa==true then
+		 pl.can_swim=true
+		end
+		return is_hazard
+end
+
+function land_area(x,y,w,h)
+ is_land = 
+		land(x-w,y-h) or
+		land(x+w,y-h) or
+		land(x-w,y+h) or
+		land(x+w,y+h)
+ return is_land
+end
+
+function warp_area(x,y,w,h)
+	return 
+		warp(x-w,y-h) or
+		warp(x+w,y-h) or
+		warp(x-w,y+h) or
+		warp(x+w,y+h)
+end
+
+-- true if [a] will hit another
+-- actor after moving dx,dy
+
+-- also handle bounce response
+-- (cheat version: both actors
+-- end up with the velocity of
+-- the fastest moving actor)
+
+function solid_actor(a, dx, dy)
+	for a2 in all(actor) do
+		if a2 != a then
+		
+			local x=(a.x+dx) - a2.x
+			local y=(a.y+dy) - a2.y
+			
+			if ((abs(x) < (a.w+a2.w)) and
+					 (abs(y) < (a.h+a2.h)))
+			then
+				
+				-- moving together?
+				-- this allows actors to
+				-- overlap initially 
+				-- without sticking together    
+				
+				-- process each axis separately
+				
+				-- along x
+				
+				if (dx != 0 and abs(x) <
+				    abs(a.x-a2.x))
+				then
+					
+					v=abs(a.dx)>abs(a2.dx) and 
+					  a.dx or a2.dx
+					a.dx,a2.dx = v,v
+					
+					local ca=
+					 collide_event(a,a2) or
+					 collide_event(a2,a)
+					return not ca
+				end
+				
+				-- along y
+				
+				if (dy != 0 and abs(y) <
+					   abs(a.y-a2.y)) then
+					v=abs(a.dy)>abs(a2.dy) and 
+					  a.dy or a2.dy
+					a.dy,a2.dy = v,v
+					
+					local ca=
+					 collide_event(a,a2) or
+					 collide_event(a2,a)
+					return not ca
+				end
+				
+			end
+		end
+	end
+	
+	return false
+end
+
+
+-- checks both walls and actors
+function solid_a(a, dx, dy)
+ if game.super_move==true then
+  return false
+ end
+	if solid_area(a.x+dx,a.y+dy,
+				a.w,a.h) then
+				return true end
+	return solid_actor(a, dx, dy) 
+end
+
+function hazard_a(a, dx, dy)
+	if hazard_area(a.x,a.y,
+				a.w,a.h) then
+				return true end 
+end
+
+function warp_a(a, dx, dy)
+	if warp_area(a.x,a.y,
+				a.w,a.h) then
+				return true end 
+end
+
+function land_a(a, dx, dy)
+	if land_area(a.x,a.y,
+				a.w,a.h) then
+				return true end 
+end
+
+-- return true when something
+-- was collected / destroyed,
+-- indicating that the two
+-- actors shouldn't bounce off
+-- each other
+
+function collide_event(a1,a2)
+ if a2.can_talk then
+  game.talking = a2.name
+ 	a2.talk_count += 1
+ 	if a2.name=="golfin" and a1.name=="oso" and a1.bigsprite==true then
+ 	 if a2.special_dialog != false then
+ 	  game.dialog_msg=a2.special_dialog
+ 	 else
+ 	 game.dialog_msg=a2.dialog
+ 	 end
+ 	 if game.talkedgolfin==4 then
+ 	  game.dialog_msg=a2.special_dialog_2
+ 	 end
+ 	 game.dialog=true
+ 	else
+ 	 game.dialog=true
+   game.dialog_msg=a2.dialog
+ 	end
+  sfx(a2.sound)
+ end
+ if a2.name=="andrea" and a2.talk_count>1 then
+ 	game.dialog_msg=a2.dialog_2
+ 	if pl.bigsprite==true then
+ 	 game.pollitos=0
+ 	 pl.can_swim=false
+ 		pl.bigsprite=false
+ 	else
+ 	 pl.bigsprite=true
+ 	 pl.can_swim=true
+ 	end
+ end
+ if a2.name=="crab" and a2.talk_count > 1 then
+  game.dialog_msg=a2.dialog_2
+ end
+ if a2.name=="pablo" and a2.talk_count > 1 then
+  game.dialog_msg=a2.dialog_2
+ end
+ if a2.name=="pablo" and a2.talk_count > 7 then
+  game.dialog_msg=a2.dialog_7
+ end
+ if a2.name=="tabash" and a2.talk_count > 1 then
+  game.dialog_msg=a2.dialog_2
+ end
+ if a2.name=="andre" and a2.talk_count > 1 then
+  game.dialog_msg=a2.dialog_2
+ end
+ if a2.name=="fuan" and a2.talk_count > 7 then
+  game.dialog_msg=a2.dialog_2
+ end
+ if a2.name=="naranita" and a2.talk_count > 1 then
+  game.dialog_msg=a2.dialog_2
+ end
+ if a2.name=="naranita_2" and a2.talk_count > 1 then
+  change_random_character()
+ end
+ if a2.name=="bubibul" and a2.talk_count > 1 then
+  if pl.bigsprite==true then
+   pl.bigsprite=false
+  else
+   pl.bigsprite=true
+  end
+ end
+ if a2.name=="casa" and a2.talk_count > 1 then
+  _init()
+ end
+ if a2.name=="passage" then
+  game.super_move=true
+  pl.x=6
+  pl.y=40
+  game.frames.x=1
+  game.frames.y=3
+ end
+ if (
+  a2.name=="lechu" 
+  or a2.name=="oso"
+  or a2.name=="viento"
+  or a2.name=="gaturri"
+ ) 
+ and a2.talk_count > 1 then
+  --
+  _k = pl.k
+  pl.k = a2.k
+  a2.k=_k
+  _n = pl.name
+  pl.name=a2.name
+  a2.name=_n
+  _d = pl.dialog
+  pl.dialog=a2.dialog
+  a2.dialog=_d
+  pl.can_talk=false
+  a2.can_talk=true
+  _a = pl.animation
+  pl.animation=a2.animation
+  a2.animation=_a
+  --
+ end
+ if (a1==pl and 
+ pl.bigsprite==true and 
+ pl.name=="lechu" and 
+ a2.k==35) then
+		del(actor,a2)
+		sfx(5)
+		return true
+	end
+	if a1.bigsprite==true and
+	 a1.name=="viento" and 
+	 includes(a2, floater.sprites) then
+	  viento.can_swim=true
+	  a1.can_swim=true
+	  game.swimming_on=true
+	  del(actor,a2)
+	  return nil
+	end
+	if a1.name=="viento" and 
+	 includes(a2, balsa.sprites) then
+	  game.has_balsa=true
+	  del(actor,a2)
+	  return nil
+	end
+	if a2.name=="key" then
+	  game.has_key=true
+	  del(actor,a2)
+	  return nil
+	end
+	-- player collects treasure
+	if (a1==pl and a2.k==02) then
+		del(actor,a2)
+		game.pollitos += 1
+		sfx(5)
+		return true
+	end
+	-- player dies drowned
+	if pl.can_swim==false then
+	 if (a1==pl and a2.k==04) then
+		 del(actor,a2)
+		 sfx(3)
+		 return true
+	 end
+	end
+	-- poisoned chicken
+	if (a1==pl and a2.k==18) then
+		pal(04,07)
+		game.state = "lost"
+		game.message= "te envenenaron"
+		return true
+	end
+	return false
+end
+
+function includes(el, arr)
+ for i=1,#arr do
+  if el.k==arr[i] then
+   return true
+  end
+ end
+ return false
+end

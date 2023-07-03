@@ -1,0 +1,356 @@
+-- wall and actor collisions
+-- by zep
+
+actor = {} -- all actors
+
+-- make an actor
+-- and add to global collection
+-- x,y means center of the actor
+-- in map tiles
+function make_actor(k, x, y)
+	a={
+		k = k,
+		x = x,
+		y = y,
+		dx = 0,
+		dy = 0,		
+		bigsprite=false,
+		biggersprite=false,
+		animation=false,
+		can_move=true,
+		can_talk=false,
+		can_swim=false,
+		talk_count=0,
+		frame = 0,
+		t = 0,
+		sound=0,
+		friction = 0.15,
+		bounce  = 0.6,
+		frames = 1,
+		
+		-- half-width and half-height
+		-- slightly less than 0.5 so
+		-- that will fit through 1-wide
+		-- holes.
+		w = 0.4,
+		h = 0.41
+	}
+	
+	add(actor,a)
+	
+	return a
+end
+
+function _init()
+ music(00)
+ actor={}
+	start_game()
+ spawn_npcs()
+	pl = make_actor(1,10,10)
+	pl.name="oso"
+	pl.friction = 0.1
+	pl.dialog=oso.dialog
+	pl.role="protag"
+	pl.animation=oso.animation
+	
+	-- bouncy ball
+	--local ball = make_actor(33,99,11)
+	--ball.dx=0.05
+	--ball.dy=-0.5
+	--ball.friction=0.02
+	--ball.bounce=0.5
+	
+	-- red ball: bounce forever
+	-- (because no friction and
+	-- max bounce)
+	--local ball = make_actor(49,7,8)
+	--ball.dx=-0.1
+	--ball.dy=0.15
+	--ball.friction=0
+	--ball.bounce=1
+	
+	-- treasure
+ for i=0,7 do
+	 a = make_actor(02,18+rnd(12),2+rnd(8))
+  a.w=0.25 a.h=0.25
+	end
+	a = make_actor(18,18+rnd(12),2+rnd(14)) 
+	
+	-- blue peopleoids
+	
+	--a = make_actor(5,7,5)
+	--a.frames=4
+	--a.dx=1/8
+	--a.friction=0.1
+	
+	--for i=1,6 do
+	-- a = make_actor(5,20+i,24)
+	-- a.frames=4
+	-- a.dx=1/8
+	-- a.friction=0.1
+	-- end	
+end
+
+function move_actor(a)
+	-- only move actor along x
+	-- if the resulting position
+	-- will not overlap with a wall
+	if btn(⬅️) and a.role=="protag" then
+	 pl.flipped=false
+	end
+	if btn(➡️) and a.role=="protag" then
+	 pl.flipped=true
+	end
+	if land_a(a, a.dx, 0) then
+	 game.swimming_on=false
+ end
+ if land_a(a, a.dy, 0) then
+  game.swimming_on=false
+ end
+	if hazard_a(a, a.dx, 0) and a.role=="protag" then
+		game.swimming_on=true
+		if pl.can_swim != true then
+			game.state="lost"
+		 game.message="estas muerto"
+		end
+	end
+	if hazard_a(a, a.dy, 0) and a.role=="protag" then
+	 game.swimming_on=true
+	 if pl.can_swim != true then
+			game.state="lost"
+		 game.message="estas muerto"
+		end
+	end
+	
+	if warp_a(a, a.dx, 0) and a.role=="protag" then
+		if game.frames.x == 8 and game.frames.y == 1 then
+		  pl.x = 25
+	   pl.y = 22
+	   game.frames.x = 2
+	   game.frames.y = 2
+	  return nil
+		end
+		if game.frames.x == 8 and game.frames.y == 2 then
+		  pl.x = 105
+	   pl.y = 24
+	   game.frames.x = 7
+	   game.frames.y = 2
+	   return nil
+		end
+  --
+  if game.frames.x == 4 and game.frames.y == 1 and game.has_key==true then
+		  pl.x = 72
+	   pl.y = 12
+	   game.frames.x = 5
+	   game.frames.y = 1
+	  return nil
+		end
+		if game.frames.x == 5 and game.frames.y == 1 then
+		  pl.x = 56
+	   pl.y = 10
+	   game.frames.x = 4
+	   game.frames.y = 1
+	  return nil
+		end
+  --
+	 if game.frames.x == 2 and game.frames.y == 2 then
+	  	pl.x = 120
+	   pl.y = 12
+	   game.frames.x = 8
+	   return nil    
+	 end
+	 if game.frames.x == 7 and game.frames.y ==  2 then
+	   pl.x = 120
+	   pl.y = 27
+	   game.frames.x = 8
+	   return nil
+	 end
+	end
+	
+	if warp_a(a, a.dy, 0) and a.role=="protag" then
+		if game.frames.x == 8 and game.frames.y == 1 then
+		  pl.x = 25
+	   pl.y = 22
+	   game.frames.x = 2
+	   game.frames.y = 2
+	  return nil
+		end
+		if game.frames.x == 8 and game.frames.y == 2 then
+		  pl.x = 105
+	   pl.y = 24
+	   game.frames.x = 7
+	   game.frames.y = 2
+	   return nil
+		end
+  --
+  if game.frames.x == 4 and game.frames.y == 1 and game.has_key==true then
+		  pl.x = 72
+	   pl.y = 12
+	   game.frames.x = 5
+	   game.frames.y = 1
+	  return nil
+		end
+		if game.frames.x == 5 and game.frames.y == 1 then
+		  pl.x = 56
+	   pl.y = 10
+	   game.frames.x = 4
+	   game.frames.y = 1
+	  return nil
+		end
+  --
+	 if game.frames.x == 2 and game.frames.y == 2 then
+	  	pl.x = 120
+	   pl.y = 12
+	   game.frames.x = 8
+	   return nil    
+	 end
+	 if game.frames.x == 7 and game.frames.y ==  2 then
+	   pl.x = 120
+	   pl.y = 27
+	   game.frames.x = 8
+	   return nil
+	 end
+	end
+
+ if game.can_move != false then
+	 if not solid_a(a, a.dx, 0) and 
+	        a.can_move == true then
+	 	a.x += a.dx
+	 else
+	 	a.dx *= -a.bounce
+	 end
+
+	 -- ditto for y
+	 if not solid_a(a, 0, a.dy) and 
+	        a.can_move == true then
+		 a.y += a.dy
+	 else
+		 a.dy *= -a.bounce
+	 end
+end
+	
+	-- apply friction
+	-- (comment for no inertia)
+	
+	a.dx *= (1-a.friction)
+	a.dy *= (1-a.friction)
+	
+	-- advance one frame every
+	-- time actor moves 1/4 of
+	-- a tile
+	
+	a.frame += abs(a.dx) * 4
+	a.frame += abs(a.dy) * 4
+	a.frame %= a.frames
+
+	a.t += 1
+	
+end
+
+function control_player(pl)
+
+	accel = 0.05
+	if (btn(0)) pl.dx -= accel 
+	if (btn(1)) pl.dx += accel 
+	if (btn(2)) pl.dy -= accel 
+	if (btn(3)) pl.dy += accel 
+	
+end
+
+function _update()
+ start_clock()
+	control_player(pl)
+	track_frame()
+	foreach(actor, move_actor)
+	button_events()
+	if game.pollitos > 4 then
+	 if pl.bigsprite==false then
+	  sfx(1)
+	 end
+	 pl.bigsprite=true
+	end
+end
+
+function draw_actor(a)
+	if pl.name=="viento" and game.swimming_on==false then
+  pl.animation={76,108}
+ end
+ if pl.name=="viento" and game.swimming_on==true then
+  pl.animation={71,103}
+ end
+ if pl.name=="gaturri" and game.swimming_on==false then
+  pl.animation={78,78}
+ end
+ if pl.name=="gaturri" and game.swimming_on==true then
+  pl.animation={99,99}
+ end
+ debug.active=true
+	local sx = (a.x * 8) - 4
+	local sy = (a.y * 8) - 4
+	if a.bigsprite==false and a.biggersprite==true then
+	 if a.animation!=false then
+	  spr(a.animation[flr(clock)], sx, sy,4,4,a.flipped)
+	 else
+	  spr(a.k + a.frame, sx, sy,4,4)
+	 end
+	elseif a.biggersprite==false and a.bigsprite==true then
+	 if a.animation!=false then
+	  spr(a.animation[flr(clock)], sx, sy,2,2,a.flipped)
+	 else
+	  spr(a.k + a.frame, sx, sy,2,2)
+	 end
+	else
+		spr(a.k + a.frame, sx, sy)
+	end
+end
+
+function _draw()
+	cls()
+	debug.active=true
+	--debug.message="swimming" ..tostr(game.swimming_on)
+	room_x=flr(pl.x/16)
+	room_y=flr(pl.y/16)
+	camera(room_x*128,room_y*128)
+	map()
+	foreach(actor,draw_actor)
+	if debug.active == true then
+	 centertext(debug.message,9)
+	end
+	if debug.warning != false then
+	 centertext(debug.warning,4)
+	end
+	
+	if game.state=="lost" then
+		game_over()
+	end
+ print_dialog()
+end
+
+function centertext(txt,clr)
+ x_text = 0
+ y_text = 61
+ if game.frames.x == 1 then
+	 x_text = 64-#txt*2
+ else
+ 	x_text = (128*(game.frames.x-1)-1)+64-#txt*2
+ end
+ if game.frames.y > 1 then
+  y_text = 126+61
+ end
+ print(txt,x_text,y_text,clr)
+end
+
+function game_over()
+ print(game.frames.x, 128, 0)
+ if game.frames.x == 1 then
+  rect(0,0,127,127,8)
+ else
+   rect(128*(game.frames.x-1),0,128*(game.frames.x-1)+127, 127, 8)
+ end
+	centertext(game.message,8)
+	if game.over_sound == false then
+	 sfx(3)
+	 game.over_sound = true
+	end
+	game.can_move=false
+end

@@ -1,0 +1,181 @@
+-- utils
+
+function start_game()
+ clock = 1
+ state = "active"
+	debug = {
+	 active=false,
+	 message="",
+	 warning=false,
+	 frames=false
+	}
+	game = {
+	 floater_on=false,
+	 has_balsa=false,
+	 has_key=true,
+	 swimming_on=false,
+	 super_move=false,
+	 talking=false,
+	 talkedgolfin=0,
+	 pollitos=0,
+	 over_sound=false,
+	 frames = {x=0,y=0},
+	 state="active",
+	 message="",
+	 can_move=true
+	}
+	animations = {
+	 x_btn = {5,6,7,6}
+	}
+end
+
+function track_frame()
+ if pl.x > 0 and pl.x < 16 then
+ 	game.frames.x=1
+ end
+ if pl.y > 0 and pl.y < 16 then
+ 	game.frames.y=1
+ end
+ 
+ if pl.x > 16 and pl.x < 32 then
+ 	game.frames.x=2
+ end
+ if pl.y > 16 and pl.y < 32 then
+ 	game.frames.y=2
+ end
+ 
+ if pl.x > 32 and pl.x < 48 then
+  game.frames.x=3
+ end
+ if pl.y > 32 and pl.y < 48 then
+  game.frames.y=3
+ end
+ 
+ if pl.x > 48 and pl.x < 64 then
+  game.frames.x=4
+ end
+ if pl.y > 48 and pl.y < 64 then
+  game.frames.y=4
+ end
+ 
+ if pl.x > 64 and pl.x < 80 then
+  game.frames.x=5
+ end
+ if pl.y > 64 and pl.y < 80 then
+  game.frames.y=5
+ end
+ 
+ if pl.x > 80 and pl.x < 96 then
+  game.frames.x=6
+ end
+ if pl.y > 80 and pl.y < 96 then
+  game.frames.y=6
+ end
+ 
+ if pl.x > 96 and pl.x < 112 then
+  game.frames.x=7
+ end
+ if pl.y > 96 and pl.y < 112 then
+  game.frames.y=7
+ end
+ 
+ if pl.x > 112 and pl.x < 128 then
+  game.frames.x=8
+ end
+ if pl.y > 112 and pl.y < 128 then
+  game.frames.y=8
+ end
+end
+
+function clear_text()
+ game.dialog = false
+ game.dialog_msg = ""
+ cls(7)
+ cls(0)
+end
+
+function button_events()
+ if btnp(❎) then
+  clear_text()
+  golfin_convo()
+ end
+end
+
+function print_dialog()
+	if game.dialog == true then
+		if game.frames.x == 1 then
+		 rectfill(0,128,128,100,0)
+			for l=1,#game.dialog_msg do
+			 print(game.dialog_msg[l],game.frames.x,100+(l*6),7)
+			end
+		 print("❎",120,120,animations.x_btn[flr(clock)])
+		else
+		 rectfill(game.frames.x*128,game.frames.y*128,128,game.frames.y*128-30,0)
+		 -- a
+		 for l=1,#game.dialog_msg do
+		  print(game.dialog_msg[l],(game.frames.x-1)*128,(game.frames.y*128-30)+(l*6),7)
+		 end
+		 print("❎",((game.frames.x-1)*128)+120,game.frames.y*128-10,animations.x_btn[flr(clock)])
+		end
+	end
+end
+
+function start_clock()
+	if clock<2.9 then
+		clock=clock+.05
+	else
+		clock=1
+	end
+end
+
+function wait(a) for i = 1,a do flip() end end
+
+function slice(tbl, first, last, step)
+  local sliced = {}
+
+  for i = first or 1, last or #tbl, step or 1 do
+    sliced[#sliced+1] = tbl[i]
+  end
+
+  return sliced
+end
+
+function golfin_convo()
+ if pl.name=="oso" and pl.bigsprite==true then
+  if game.talking == "golfin" and game.talkedgolfin==0 then
+   t = slice(golfin.special_dialog,5,8,1)
+   game.dialog_msg=t
+   game.dialog=true
+   game.talkedgolfin=1 
+  elseif game.talking == "golfin" and game.talkedgolfin==1 then
+   t = slice(golfin.special_dialog,9,12,1)
+   game.dialog_msg=t
+   game.dialog=true
+   game.talkedgolfin=2
+  elseif game.talking == "golfin" and game.talkedgolfin==2 then
+   t = slice(golfin.special_dialog,13,16,1)
+   game.dialog_msg=t
+   game.dialog=true
+   game.talkedgolfin=3
+		elseif game.talkedgolfin==3 then
+		 clear_text()
+		 game.talkedgolfin=4
+		-- second layer of text
+		elseif game.talkedgolfin==4 then
+		 t = slice(golfin.special_dialog_2,5,8,1)
+   game.dialog_msg=t
+   game.dialog=true
+   game.talkedgolfin=5
+  elseif game.talkedgolfin==5 then
+		 t = slice(golfin.special_dialog_2,9,12,1)
+   game.dialog_msg=t
+   game.dialog=true
+   game.talkedgolfin=6
+  elseif game.talkedgolfin==6 then
+		 t = slice(golfin.special_dialog_2,12,16,1)
+   game.dialog_msg=t
+   game.dialog=true
+   game.talkedgolfin=7
+		end
+	end
+end

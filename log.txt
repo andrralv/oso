@@ -48,58 +48,44 @@
 [000000]     43 gfx_grid_lines 0
 [000000]   
 [000000]   codo_system_init
-[000472]   Compiled against SDL version: 2.0.12
-[000472]   Linked against SDL version:   2.0.12
-[000472]   Current video driver: cocoa
-[000472]   codo_reset_timer
-[000472]   codo_gui_init
-[000472]   codo_keys_init
-[000472]   codo_text_init
-[000472]   codo_video_init
-[000472]   codo_mouse_init
-[000472]   codo_joystick_init
-[000473]   Reading controller mappings: /Users/andre/pico/games/oso/sdl_controllers.txt
-[000473]   searching for joysticks
-[000473]     found 0 joysticks
-[000473]   ok
-[000473] ok
-[000488] codo_load_pod: /Applications/PICO-8.app/Contents/MacOS/pico8.dat ok 
-[000490] codo_set_screen 128 128 8 100
-[000490]  window size: 640 540
-[000531]   setting filter to nearest (screen_mode 0  back page width: 128)
+[000561]   Compiled against SDL version: 2.0.12
+[000561]   Linked against SDL version:   2.0.12
+[000561]   Current video driver: cocoa
+[000562]   codo_reset_timer
+[000562]   codo_gui_init
+[000562]   codo_keys_init
+[000562]   codo_text_init
+[000563]   codo_video_init
+[000563]   codo_mouse_init
+[000563]   codo_joystick_init
+[000563]   Reading controller mappings: /Users/andre/pico/games/oso/sdl_controllers.txt
+[000563]   searching for joysticks
+[000563]     found 0 joysticks
+[000563]   ok
+[000563] ok
+[000578] codo_load_pod: /Applications/PICO-8.app/Contents/MacOS/pico8.dat ok 
+[000581] codo_set_screen 128 128 8 100
+[000581]  window size: 640 540
+[000724]   setting filter to nearest (screen_mode 0  back page width: 128)
   renderer metal:
    flags: 0x0000000E ( |  | )
    texture formats (6): ARGB8888, ABGR8888, YV12, IYUV, 0x3231564e, 0x3132564e
    max texture size: 16384x16384
-[000537]  desktop size: 2560 1080
-[000537] ok
-[000550] codo_sound_init mix_buffer_size: 1024
-[000550] codo_sound_init
-[000550] SDL_INIT_AUDIO ok
-[003009] SDL_OpenAudio ok
-[003009]  freq:22050
+[000732]  desktop size: 2560 1080
+[000732] ok
+[000755] codo_sound_init mix_buffer_size: 1024
+[000755] codo_sound_init
+[000755] SDL_INIT_AUDIO ok
+[000875] SDL_OpenAudio ok
+[000875]  freq:22050
  channels:1
-[003009] Built-in audio drivers: 0 coreaudio 1 disk 2 dummy
-[003009] Current audio driver: coreaudio
-[003009] splore_init
-[003009] could not load favourites file: /Users/andre/pico/games/oso/favourites.txt
-[005138] loading /Users/andre/pico/games/oso/main.lua.p8
-[006830] run_cart current_filename: /Users/andre/pico/games/oso/main.lua.p8 running_filename: /Users/andre/pico/games/oso/main.lua.p8 running_cart_lid: 
-[031172] run_cart current_filename: /Users/andre/pico/games/oso/main.lua.p8 running_filename: /Users/andre/pico/games/oso/main.lua.p8 running_cart_lid: 
-[121858] run_cart current_filename: /Users/andre/pico/games/oso/main.lua.p8 running_filename: /Users/andre/pico/games/oso/main.lua.p8 running_cart_lid: 
-[169898] run_cart current_filename: /Users/andre/pico/games/oso/main.lua.p8 running_filename: /Users/andre/pico/games/oso/main.lua.p8 running_cart_lid: 
-[181639] run_cart current_filename: /Users/andre/pico/games/oso/main.lua.p8 running_filename: /Users/andre/pico/games/oso/main.lua.p8 running_cart_lid: 
-[376085] run_cart current_filename: /Users/andre/pico/games/oso/main.lua.p8 running_filename: /Users/andre/pico/games/oso/main.lua.p8 running_cart_lid: 
-[403465] run_cart current_filename: /Users/andre/pico/games/oso/main.lua.p8 running_filename: /Users/andre/pico/games/oso/main.lua.p8 running_cart_lid: 
-[405632] run_cart current_filename: /Users/andre/pico/games/oso/main.lua.p8 running_filename: /Users/andre/pico/games/oso/main.lua.p8 running_cart_lid: 
-[407202] run_cart current_filename: /Users/andre/pico/games/oso/main.lua.p8 running_filename: /Users/andre/pico/games/oso/main.lua.p8 running_cart_lid: 
-[496485] run_cart current_filename: /Users/andre/pico/games/oso/main.lua.p8 running_filename: /Users/andre/pico/games/oso/main.lua.p8 running_cart_lid: 
-[539437] run_cart current_filename: /Users/andre/pico/games/oso/main.lua.p8 running_filename: /Users/andre/pico/games/oso/main.lua.p8 running_cart_lid: 
-[547718] run_cart current_filename: /Users/andre/pico/games/oso/main.lua.p8 running_filename: /Users/andre/pico/games/oso/main.lua.p8 running_cart_lid: 
-[795234] run_cart current_filename: /Users/andre/pico/games/oso/main.lua.p8 running_filename: /Users/andre/pico/games/oso/main.lua.p8 running_cart_lid: 
-[798279] run_cart current_filename: /Users/andre/pico/games/oso/main.lua.p8 running_filename: /Users/andre/pico/games/oso/main.lua.p8 running_cart_lid: 
-[3305929] run_cart current_filename: /Users/andre/pico/games/oso/main.lua.p8 running_filename: /Users/andre/pico/games/oso/main.lua.p8 running_cart_lid: 
-[3324659] run_cart current_filename: /Users/andre/pico/games/oso/main.lua.p8 running_filename: /Users/andre/pico/games/oso/main.lua.p8 running_cart_lid: 
-[3338593] run_cart current_filename: /Users/andre/pico/games/oso/main.lua.p8 running_filename: /Users/andre/pico/games/oso/main.lua.p8 running_cart_lid: 
-[3624427] run_cart current_filename: /Users/andre/pico/games/oso/main.lua.p8 running_filename: /Users/andre/pico/games/oso/main.lua.p8 running_cart_lid: 
-[3678316] run_cart current_filename: /Users/andre/pico/games/oso/main.lua.p8 running_filename: /Users/andre/pico/games/oso/main.lua.p8 running_cart_lid: 
+[000875] Built-in audio drivers: 0 coreaudio 1 disk 2 dummy
+[000875] Current audio driver: coreaudio
+[000875] splore_init
+[000875] could not load favourites file: /Users/andre/pico/games/oso/favourites.txt
+[003051] loading /Users/andre/pico/games/oso/main.lua.p8
+[004733] run_cart current_filename: /Users/andre/pico/games/oso/main.lua.p8 running_filename: /Users/andre/pico/games/oso/main.lua.p8 running_cart_lid: 
+[080590] run_cart current_filename: /Users/andre/pico/games/oso/main.lua.p8 running_filename: /Users/andre/pico/games/oso/main.lua.p8 running_cart_lid: 
+[083854] run_cart current_filename: /Users/andre/pico/games/oso/main.lua.p8 running_filename: /Users/andre/pico/games/oso/main.lua.p8 running_cart_lid: 
+[145912] run_cart current_filename: /Users/andre/pico/games/oso/main.lua.p8 running_filename: /Users/andre/pico/games/oso/main.lua.p8 running_cart_lid: 
+[332698] run_cart current_filename: /Users/andre/pico/games/oso/main.lua.p8 running_filename: /Users/andre/pico/games/oso/main.lua.p8 running_cart_lid: 
