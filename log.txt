@@ -13,7 +13,7 @@
 [000000]     08 blit_method 0  // 0 auto  1 software (slower but sometimes more reliable)  2 hardware (can do filtered scaling) 
 [000000]     09 foreground_sleep_ms 2 // number of milliseconds to sleep each frame. Try 10 to conserve battery power
 [000000]     10 background_sleep_ms 10 // number of milliseconds to sleep each frame when running in the background
-[000000]     11 sessions 12 // number of times program has been run
+[000000]     11 sessions 13 // number of times program has been run
 [000000]     12 rmb_key 0 // 0 for none  226 for LALT
 [000000]     13 desktop_path 
 [000000]     14 read_controllers_in_background 0
@@ -48,312 +48,51 @@
 [000000]     43 gfx_grid_lines 0
 [000000]   
 [000000]   codo_system_init
-[000399]   Compiled against SDL version: 2.0.12
-[000399]   Linked against SDL version:   2.0.12
-[000399]   Current video driver: cocoa
-[000399]   codo_reset_timer
-[000399]   codo_gui_init
-[000399]   codo_keys_init
-[000399]   codo_text_init
-[000399]   codo_video_init
-[000399]   codo_mouse_init
-[000399]   codo_joystick_init
-[000400]   Reading controller mappings: /Users/andre/pico/games/oso/sdl_controllers.txt
-[000400]   searching for joysticks
-[000400]     found 0 joysticks
-[000400]   ok
-[000400] ok
-[000414] codo_load_pod: /Applications/PICO-8.app/Contents/MacOS/pico8.dat ok 
-[000416] codo_set_screen 128 128 8 100
-[000416]  window size: 640 540
-[000521]   setting filter to nearest (screen_mode 0  back page width: 128)
+[000576]   Compiled against SDL version: 2.0.12
+[000576]   Linked against SDL version:   2.0.12
+[000576]   Current video driver: cocoa
+[000576]   codo_reset_timer
+[000577]   codo_gui_init
+[000577]   codo_keys_init
+[000577]   codo_text_init
+[000577]   codo_video_init
+[000577]   codo_mouse_init
+[000577]   codo_joystick_init
+[000577]   Reading controller mappings: /Users/andre/pico/games/oso/sdl_controllers.txt
+[000577]   searching for joysticks
+[000577]     found 0 joysticks
+[000577]   ok
+[000577] ok
+[000592] codo_load_pod: /Applications/PICO-8.app/Contents/MacOS/pico8.dat ok 
+[000595] codo_set_screen 128 128 8 100
+[000595]  window size: 640 540
+[000684]   setting filter to nearest (screen_mode 0  back page width: 128)
   renderer metal:
    flags: 0x0000000E ( |  | )
    texture formats (6): ARGB8888, ABGR8888, YV12, IYUV, 0x3231564e, 0x3132564e
    max texture size: 16384x16384
-[000528]  desktop size: 1440 900
-[000528] ok
-[000544] codo_sound_init mix_buffer_size: 1024
-[000544] codo_sound_init
-[000544] SDL_INIT_AUDIO ok
-[000679] SDL_OpenAudio ok
-[000679]  freq:22050
+[000692]  desktop size: 2560 1080
+[000692] ok
+[000710] codo_sound_init mix_buffer_size: 1024
+[000710] codo_sound_init
+[000710] SDL_INIT_AUDIO ok
+[000811] SDL_OpenAudio ok
+[000811]  freq:22050
  channels:1
-[000679] Built-in audio drivers: 0 coreaudio 1 disk 2 dummy
-[000679] Current audio driver: coreaudio
-[000679] splore_init
-[000680] could not load favourites file: /Users/andre/pico/games/oso/favourites.txt
-[002837] loading /Users/andre/pico/games/oso/main.lua.p8
-[004510] run_cart current_filename: /Users/andre/pico/games/oso/main.lua.p8 running_filename: /Users/andre/pico/games/oso/main.lua.p8 running_cart_lid: 
-[014365] run_cart current_filename: /Users/andre/pico/games/oso/main.lua.p8 running_filename: /Users/andre/pico/games/oso/main.lua.p8 running_cart_lid: 
-[190285] run_cart current_filename: /Users/andre/pico/games/oso/main.lua.p8 running_filename: /Users/andre/pico/games/oso/main.lua.p8 running_cart_lid: 
-[227247] run_cart current_filename: /Users/andre/pico/games/oso/main.lua.p8 running_filename: /Users/andre/pico/games/oso/main.lua.p8 running_cart_lid: 
-[264938] run_cart current_filename: /Users/andre/pico/games/oso/main.lua.p8 running_filename: /Users/andre/pico/games/oso/main.lua.p8 running_cart_lid: 
-[381083] run_cart current_filename: /Users/andre/pico/games/oso/main.lua.p8 running_filename: /Users/andre/pico/games/oso/main.lua.p8 running_cart_lid: 
-[395090] run_cart current_filename: /Users/andre/pico/games/oso/main.lua.p8 running_filename: /Users/andre/pico/games/oso/main.lua.p8 running_cart_lid: 
-[409482] run_cart current_filename: /Users/andre/pico/games/oso/main.lua.p8 running_filename: /Users/andre/pico/games/oso/main.lua.p8 running_cart_lid: 
-[553627] run_cart current_filename: /Users/andre/pico/games/oso/main.lua.p8 running_filename: /Users/andre/pico/games/oso/main.lua.p8 running_cart_lid: 
-[562328] run_cart current_filename: /Users/andre/pico/games/oso/main.lua.p8 running_filename: /Users/andre/pico/games/oso/main.lua.p8 running_cart_lid: 
-[582848] run_cart current_filename: /Users/andre/pico/games/oso/main.lua.p8 running_filename: /Users/andre/pico/games/oso/main.lua.p8 running_cart_lid: 
-[616794] run_cart current_filename: /Users/andre/pico/games/oso/main.lua.p8 running_filename: /Users/andre/pico/games/oso/main.lua.p8 running_cart_lid: 
-[620266] run_cart current_filename: /Users/andre/pico/games/oso/main.lua.p8 running_filename: /Users/andre/pico/games/oso/main.lua.p8 running_cart_lid: 
-[653874] run_cart current_filename: /Users/andre/pico/games/oso/main.lua.p8 running_filename: /Users/andre/pico/games/oso/main.lua.p8 running_cart_lid: 
-[706973] run_cart current_filename: /Users/andre/pico/games/oso/main.lua.p8 running_filename: /Users/andre/pico/games/oso/main.lua.p8 running_cart_lid: 
-[709967] run_cart current_filename: /Users/andre/pico/games/oso/main.lua.p8 running_filename: /Users/andre/pico/games/oso/main.lua.p8 running_cart_lid: 
-[818681] run_cart current_filename: /Users/andre/pico/games/oso/main.lua.p8 running_filename: /Users/andre/pico/games/oso/main.lua.p8 running_cart_lid: 
-[823765] run_cart current_filename: /Users/andre/pico/games/oso/main.lua.p8 running_filename: /Users/andre/pico/games/oso/main.lua.p8 running_cart_lid: 
-[846310] run_cart current_filename: /Users/andre/pico/games/oso/main.lua.p8 running_filename: /Users/andre/pico/games/oso/main.lua.p8 running_cart_lid: 
-[860397] run_cart current_filename: /Users/andre/pico/games/oso/main.lua.p8 running_filename: /Users/andre/pico/games/oso/main.lua.p8 running_cart_lid: 
-[863132] run_cart current_filename: /Users/andre/pico/games/oso/main.lua.p8 running_filename: /Users/andre/pico/games/oso/main.lua.p8 running_cart_lid: 
-[974392] run_cart current_filename: /Users/andre/pico/games/oso/main.lua.p8 running_filename: /Users/andre/pico/games/oso/main.lua.p8 running_cart_lid: 
-[979399] run_cart current_filename: /Users/andre/pico/games/oso/main.lua.p8 running_filename: /Users/andre/pico/games/oso/main.lua.p8 running_cart_lid: 
-[998581] run_cart current_filename: /Users/andre/pico/games/oso/main.lua.p8 running_filename: /Users/andre/pico/games/oso/main.lua.p8 running_cart_lid: 
-[1005675] run_cart current_filename: /Users/andre/pico/games/oso/main.lua.p8 running_filename: /Users/andre/pico/games/oso/main.lua.p8 running_cart_lid: 
-[1050955] run_cart current_filename: /Users/andre/pico/games/oso/main.lua.p8 running_filename: /Users/andre/pico/games/oso/main.lua.p8 running_cart_lid: 
-[1060443] run_cart current_filename: /Users/andre/pico/games/oso/main.lua.p8 running_filename: /Users/andre/pico/games/oso/main.lua.p8 running_cart_lid: 
-[1087918] run_cart current_filename: /Users/andre/pico/games/oso/main.lua.p8 running_filename: /Users/andre/pico/games/oso/main.lua.p8 running_cart_lid: 
-[1118968] run_cart current_filename: /Users/andre/pico/games/oso/main.lua.p8 running_filename: /Users/andre/pico/games/oso/main.lua.p8 running_cart_lid: 
-[1124050] run_cart current_filename: /Users/andre/pico/games/oso/main.lua.p8 running_filename: /Users/andre/pico/games/oso/main.lua.p8 running_cart_lid: 
-[1211705] run_cart current_filename: /Users/andre/pico/games/oso/main.lua.p8 running_filename: /Users/andre/pico/games/oso/main.lua.p8 running_cart_lid: 
-[1214700] run_cart current_filename: /Users/andre/pico/games/oso/main.lua.p8 running_filename: /Users/andre/pico/games/oso/main.lua.p8 running_cart_lid: 
-[1218970] run_cart current_filename: /Users/andre/pico/games/oso/main.lua.p8 running_filename: /Users/andre/pico/games/oso/main.lua.p8 running_cart_lid: 
-[1379270] run_cart current_filename: /Users/andre/pico/games/oso/main.lua.p8 running_filename: /Users/andre/pico/games/oso/main.lua.p8 running_cart_lid: 
-[1434143] run_cart current_filename: /Users/andre/pico/games/oso/main.lua.p8 running_filename: /Users/andre/pico/games/oso/main.lua.p8 running_cart_lid: 
-[1452624] run_cart current_filename: /Users/andre/pico/games/oso/main.lua.p8 running_filename: /Users/andre/pico/games/oso/main.lua.p8 running_cart_lid: 
-[1486621] run_cart current_filename: /Users/andre/pico/games/oso/main.lua.p8 running_filename: /Users/andre/pico/games/oso/main.lua.p8 running_cart_lid: 
-[1502746] run_cart current_filename: /Users/andre/pico/games/oso/main.lua.p8 running_filename: /Users/andre/pico/games/oso/main.lua.p8 running_cart_lid: 
-[1525810] run_cart current_filename: /Users/andre/pico/games/oso/main.lua.p8 running_filename: /Users/andre/pico/games/oso/main.lua.p8 running_cart_lid: 
-[1550191] run_cart current_filename: /Users/andre/pico/games/oso/main.lua.p8 running_filename: /Users/andre/pico/games/oso/main.lua.p8 running_cart_lid: 
-[1561623] run_cart current_filename: /Users/andre/pico/games/oso/main.lua.p8 running_filename: /Users/andre/pico/games/oso/main.lua.p8 running_cart_lid: 
-[1646201] run_cart current_filename: /Users/andre/pico/games/oso/main.lua.p8 running_filename: /Users/andre/pico/games/oso/main.lua.p8 running_cart_lid: 
-[1650873] run_cart current_filename: /Users/andre/pico/games/oso/main.lua.p8 running_filename: /Users/andre/pico/games/oso/main.lua.p8 running_cart_lid: 
-[1674484] run_cart current_filename: /Users/andre/pico/games/oso/main.lua.p8 running_filename: /Users/andre/pico/games/oso/main.lua.p8 running_cart_lid: 
-[1680469] run_cart current_filename: /Users/andre/pico/games/oso/main.lua.p8 running_filename: /Users/andre/pico/games/oso/main.lua.p8 running_cart_lid: 
-[1692344] run_cart current_filename: /Users/andre/pico/games/oso/main.lua.p8 running_filename: /Users/andre/pico/games/oso/main.lua.p8 running_cart_lid: 
-[1701227] run_cart current_filename: /Users/andre/pico/games/oso/main.lua.p8 running_filename: /Users/andre/pico/games/oso/main.lua.p8 running_cart_lid: 
-[1703822] run_cart current_filename: /Users/andre/pico/games/oso/main.lua.p8 running_filename: /Users/andre/pico/games/oso/main.lua.p8 running_cart_lid: 
-[1712808] run_cart current_filename: /Users/andre/pico/games/oso/main.lua.p8 running_filename: /Users/andre/pico/games/oso/main.lua.p8 running_cart_lid: 
-[1755441] run_cart current_filename: /Users/andre/pico/games/oso/main.lua.p8 running_filename: /Users/andre/pico/games/oso/main.lua.p8 running_cart_lid: 
-[1764445] run_cart current_filename: /Users/andre/pico/games/oso/main.lua.p8 running_filename: /Users/andre/pico/games/oso/main.lua.p8 running_cart_lid: 
-[1774980] run_cart current_filename: /Users/andre/pico/games/oso/main.lua.p8 running_filename: /Users/andre/pico/games/oso/main.lua.p8 running_cart_lid: 
-[1830394] run_cart current_filename: /Users/andre/pico/games/oso/main.lua.p8 running_filename: /Users/andre/pico/games/oso/main.lua.p8 running_cart_lid: 
-[1921259] run_cart current_filename: /Users/andre/pico/games/oso/main.lua.p8 running_filename: /Users/andre/pico/games/oso/main.lua.p8 running_cart_lid: 
-[1949509] run_cart current_filename: /Users/andre/pico/games/oso/main.lua.p8 running_filename: /Users/andre/pico/games/oso/main.lua.p8 running_cart_lid: 
-[1965594] run_cart current_filename: /Users/andre/pico/games/oso/main.lua.p8 running_filename: /Users/andre/pico/games/oso/main.lua.p8 running_cart_lid: 
-[1968392] run_cart current_filename: /Users/andre/pico/games/oso/main.lua.p8 running_filename: /Users/andre/pico/games/oso/main.lua.p8 running_cart_lid: 
-[2006570] run_cart current_filename: /Users/andre/pico/games/oso/main.lua.p8 running_filename: /Users/andre/pico/games/oso/main.lua.p8 running_cart_lid: 
-[2073798] run_cart current_filename: /Users/andre/pico/games/oso/main.lua.p8 running_filename: /Users/andre/pico/games/oso/main.lua.p8 running_cart_lid: 
-[2129603] run_cart current_filename: /Users/andre/pico/games/oso/main.lua.p8 running_filename: /Users/andre/pico/games/oso/main.lua.p8 running_cart_lid: 
-[2139150] run_cart current_filename: /Users/andre/pico/games/oso/main.lua.p8 running_filename: /Users/andre/pico/games/oso/main.lua.p8 running_cart_lid: 
-[2157266] run_cart current_filename: /Users/andre/pico/games/oso/main.lua.p8 running_filename: /Users/andre/pico/games/oso/main.lua.p8 running_cart_lid: 
-[2201891] run_cart current_filename: /Users/andre/pico/games/oso/main.lua.p8 running_filename: /Users/andre/pico/games/oso/main.lua.p8 running_cart_lid: 
-[2204753] run_cart current_filename: /Users/andre/pico/games/oso/main.lua.p8 running_filename: /Users/andre/pico/games/oso/main.lua.p8 running_cart_lid: 
-[2217268] run_cart current_filename: /Users/andre/pico/games/oso/main.lua.p8 running_filename: /Users/andre/pico/games/oso/main.lua.p8 running_cart_lid: 
-[2233185] run_cart current_filename: /Users/andre/pico/games/oso/main.lua.p8 running_filename: /Users/andre/pico/games/oso/main.lua.p8 running_cart_lid: 
-[2242471] run_cart current_filename: /Users/andre/pico/games/oso/main.lua.p8 running_filename: /Users/andre/pico/games/oso/main.lua.p8 running_cart_lid: 
-[2282217] run_cart current_filename: /Users/andre/pico/games/oso/main.lua.p8 running_filename: /Users/andre/pico/games/oso/main.lua.p8 running_cart_lid: 
-[2296592] run_cart current_filename: /Users/andre/pico/games/oso/main.lua.p8 running_filename: /Users/andre/pico/games/oso/main.lua.p8 running_cart_lid: 
-[2299021] run_cart current_filename: /Users/andre/pico/games/oso/main.lua.p8 running_filename: /Users/andre/pico/games/oso/main.lua.p8 running_cart_lid: 
-[2308403] run_cart current_filename: /Users/andre/pico/games/oso/main.lua.p8 running_filename: /Users/andre/pico/games/oso/main.lua.p8 running_cart_lid: 
-[2321118] run_cart current_filename: /Users/andre/pico/games/oso/main.lua.p8 running_filename: /Users/andre/pico/games/oso/main.lua.p8 running_cart_lid: 
-[2352825] run_cart current_filename: /Users/andre/pico/games/oso/main.lua.p8 running_filename: /Users/andre/pico/games/oso/main.lua.p8 running_cart_lid: 
-[2403746] run_cart current_filename: /Users/andre/pico/games/oso/main.lua.p8 running_filename: /Users/andre/pico/games/oso/main.lua.p8 running_cart_lid: 
-[2475749] run_cart current_filename: /Users/andre/pico/games/oso/main.lua.p8 running_filename: /Users/andre/pico/games/oso/main.lua.p8 running_cart_lid: 
-[2478628] run_cart current_filename: /Users/andre/pico/games/oso/main.lua.p8 running_filename: /Users/andre/pico/games/oso/main.lua.p8 running_cart_lid: 
-[2494131] run_cart current_filename: /Users/andre/pico/games/oso/main.lua.p8 running_filename: /Users/andre/pico/games/oso/main.lua.p8 running_cart_lid: 
-[2509483] run_cart current_filename: /Users/andre/pico/games/oso/main.lua.p8 running_filename: /Users/andre/pico/games/oso/main.lua.p8 running_cart_lid: 
-[2512044] run_cart current_filename: /Users/andre/pico/games/oso/main.lua.p8 running_filename: /Users/andre/pico/games/oso/main.lua.p8 running_cart_lid: 
-[2529140] run_cart current_filename: /Users/andre/pico/games/oso/main.lua.p8 running_filename: /Users/andre/pico/games/oso/main.lua.p8 running_cart_lid: 
-[2531746] run_cart current_filename: /Users/andre/pico/games/oso/main.lua.p8 running_filename: /Users/andre/pico/games/oso/main.lua.p8 running_cart_lid: 
-[2543247] run_cart current_filename: /Users/andre/pico/games/oso/main.lua.p8 running_filename: /Users/andre/pico/games/oso/main.lua.p8 running_cart_lid: 
-[2549546] run_cart current_filename: /Users/andre/pico/games/oso/main.lua.p8 running_filename: /Users/andre/pico/games/oso/main.lua.p8 running_cart_lid: 
-[2562039] run_cart current_filename: /Users/andre/pico/games/oso/main.lua.p8 running_filename: /Users/andre/pico/games/oso/main.lua.p8 running_cart_lid: 
-[2612735] run_cart current_filename: /Users/andre/pico/games/oso/main.lua.p8 running_filename: /Users/andre/pico/games/oso/main.lua.p8 running_cart_lid: 
-[2702683] run_cart current_filename: /Users/andre/pico/games/oso/main.lua.p8 running_filename: /Users/andre/pico/games/oso/main.lua.p8 running_cart_lid: 
-[2975853] run_cart current_filename: /Users/andre/pico/games/oso/main.lua.p8 running_filename: /Users/andre/pico/games/oso/main.lua.p8 running_cart_lid: 
-[3076724] run_cart current_filename: /Users/andre/pico/games/oso/main.lua.p8 running_filename: /Users/andre/pico/games/oso/main.lua.p8 running_cart_lid: 
-[3087668] run_cart current_filename: /Users/andre/pico/games/oso/main.lua.p8 running_filename: /Users/andre/pico/games/oso/main.lua.p8 running_cart_lid: 
-[3090302] run_cart current_filename: /Users/andre/pico/games/oso/main.lua.p8 running_filename: /Users/andre/pico/games/oso/main.lua.p8 running_cart_lid: 
-[3208163] run_cart current_filename: /Users/andre/pico/games/oso/main.lua.p8 running_filename: /Users/andre/pico/games/oso/main.lua.p8 running_cart_lid: 
-[3296265] run_cart current_filename: /Users/andre/pico/games/oso/main.lua.p8 running_filename: /Users/andre/pico/games/oso/main.lua.p8 running_cart_lid: 
-[3332294] run_cart current_filename: /Users/andre/pico/games/oso/main.lua.p8 running_filename: /Users/andre/pico/games/oso/main.lua.p8 running_cart_lid: 
-[3343006] run_cart current_filename: /Users/andre/pico/games/oso/main.lua.p8 running_filename: /Users/andre/pico/games/oso/main.lua.p8 running_cart_lid: 
-[3348742] run_cart current_filename: /Users/andre/pico/games/oso/main.lua.p8 running_filename: /Users/andre/pico/games/oso/main.lua.p8 running_cart_lid: 
-[3360501] run_cart current_filename: /Users/andre/pico/games/oso/main.lua.p8 running_filename: /Users/andre/pico/games/oso/main.lua.p8 running_cart_lid: 
-[3522587] run_cart current_filename: /Users/andre/pico/games/oso/main.lua.p8 running_filename: /Users/andre/pico/games/oso/main.lua.p8 running_cart_lid: 
-[3562425] run_cart current_filename: /Users/andre/pico/games/oso/main.lua.p8 running_filename: /Users/andre/pico/games/oso/main.lua.p8 running_cart_lid: 
-[3597073] run_cart current_filename: /Users/andre/pico/games/oso/main.lua.p8 running_filename: /Users/andre/pico/games/oso/main.lua.p8 running_cart_lid: 
-[3640334] run_cart current_filename: /Users/andre/pico/games/oso/main.lua.p8 running_filename: /Users/andre/pico/games/oso/main.lua.p8 running_cart_lid: 
-[3663870] run_cart current_filename: /Users/andre/pico/games/oso/main.lua.p8 running_filename: /Users/andre/pico/games/oso/main.lua.p8 running_cart_lid: 
-[3680503] run_cart current_filename: /Users/andre/pico/games/oso/main.lua.p8 running_filename: /Users/andre/pico/games/oso/main.lua.p8 running_cart_lid: 
-[3721683] run_cart current_filename: /Users/andre/pico/games/oso/main.lua.p8 running_filename: /Users/andre/pico/games/oso/main.lua.p8 running_cart_lid: 
-[3779631] run_cart current_filename: /Users/andre/pico/games/oso/main.lua.p8 running_filename: /Users/andre/pico/games/oso/main.lua.p8 running_cart_lid: 
-[3826897] run_cart current_filename: /Users/andre/pico/games/oso/main.lua.p8 running_filename: /Users/andre/pico/games/oso/main.lua.p8 running_cart_lid: 
-[3838324] run_cart current_filename: /Users/andre/pico/games/oso/main.lua.p8 running_filename: /Users/andre/pico/games/oso/main.lua.p8 running_cart_lid: 
-[3862126] run_cart current_filename: /Users/andre/pico/games/oso/main.lua.p8 running_filename: /Users/andre/pico/games/oso/main.lua.p8 running_cart_lid: 
-[3865239] run_cart current_filename: /Users/andre/pico/games/oso/main.lua.p8 running_filename: /Users/andre/pico/games/oso/main.lua.p8 running_cart_lid: 
-[3892858] run_cart current_filename: /Users/andre/pico/games/oso/main.lua.p8 running_filename: /Users/andre/pico/games/oso/main.lua.p8 running_cart_lid: 
-[3950317] run_cart current_filename: /Users/andre/pico/games/oso/main.lua.p8 running_filename: /Users/andre/pico/games/oso/main.lua.p8 running_cart_lid: 
-[4014247] run_cart current_filename: /Users/andre/pico/games/oso/main.lua.p8 running_filename: /Users/andre/pico/games/oso/main.lua.p8 running_cart_lid: 
-[4074418] run_cart current_filename: /Users/andre/pico/games/oso/main.lua.p8 running_filename: /Users/andre/pico/games/oso/main.lua.p8 running_cart_lid: 
-[4118179] run_cart current_filename: /Users/andre/pico/games/oso/main.lua.p8 running_filename: /Users/andre/pico/games/oso/main.lua.p8 running_cart_lid: 
-[4142842] run_cart current_filename: /Users/andre/pico/games/oso/main.lua.p8 running_filename: /Users/andre/pico/games/oso/main.lua.p8 running_cart_lid: 
-[4165419] run_cart current_filename: /Users/andre/pico/games/oso/main.lua.p8 running_filename: /Users/andre/pico/games/oso/main.lua.p8 running_cart_lid: 
-[4338209] run_cart current_filename: /Users/andre/pico/games/oso/main.lua.p8 running_filename: /Users/andre/pico/games/oso/main.lua.p8 running_cart_lid: 
-[4371387] run_cart current_filename: /Users/andre/pico/games/oso/main.lua.p8 running_filename: /Users/andre/pico/games/oso/main.lua.p8 running_cart_lid: 
-[4398090] run_cart current_filename: /Users/andre/pico/games/oso/main.lua.p8 running_filename: /Users/andre/pico/games/oso/main.lua.p8 running_cart_lid: 
-[4440848] run_cart current_filename: /Users/andre/pico/games/oso/main.lua.p8 running_filename: /Users/andre/pico/games/oso/main.lua.p8 running_cart_lid: 
-[4502629] run_cart current_filename: /Users/andre/pico/games/oso/main.lua.p8 running_filename: /Users/andre/pico/games/oso/main.lua.p8 running_cart_lid: 
-[4563850] run_cart current_filename: /Users/andre/pico/games/oso/main.lua.p8 running_filename: /Users/andre/pico/games/oso/main.lua.p8 running_cart_lid: 
-[4626849] run_cart current_filename: /Users/andre/pico/games/oso/main.lua.p8 running_filename: /Users/andre/pico/games/oso/main.lua.p8 running_cart_lid: 
-[4763448] run_cart current_filename: /Users/andre/pico/games/oso/main.lua.p8 running_filename: /Users/andre/pico/games/oso/main.lua.p8 running_cart_lid: 
-[4848198] run_cart current_filename: /Users/andre/pico/games/oso/main.lua.p8 running_filename: /Users/andre/pico/games/oso/main.lua.p8 running_cart_lid: 
-[4936666] run_cart current_filename: /Users/andre/pico/games/oso/main.lua.p8 running_filename: /Users/andre/pico/games/oso/main.lua.p8 running_cart_lid: 
-[4942768] run_cart current_filename: /Users/andre/pico/games/oso/main.lua.p8 running_filename: /Users/andre/pico/games/oso/main.lua.p8 running_cart_lid: 
-[5015906] run_cart current_filename: /Users/andre/pico/games/oso/main.lua.p8 running_filename: /Users/andre/pico/games/oso/main.lua.p8 running_cart_lid: 
-[5018552] run_cart current_filename: /Users/andre/pico/games/oso/main.lua.p8 running_filename: /Users/andre/pico/games/oso/main.lua.p8 running_cart_lid: 
-[5021054] run_cart current_filename: /Users/andre/pico/games/oso/main.lua.p8 running_filename: /Users/andre/pico/games/oso/main.lua.p8 running_cart_lid: 
-[5051708] run_cart current_filename: /Users/andre/pico/games/oso/main.lua.p8 running_filename: /Users/andre/pico/games/oso/main.lua.p8 running_cart_lid: 
-[5080929] run_cart current_filename: /Users/andre/pico/games/oso/main.lua.p8 running_filename: /Users/andre/pico/games/oso/main.lua.p8 running_cart_lid: 
-[5084686] run_cart current_filename: /Users/andre/pico/games/oso/main.lua.p8 running_filename: /Users/andre/pico/games/oso/main.lua.p8 running_cart_lid: 
-[5111259] run_cart current_filename: /Users/andre/pico/games/oso/main.lua.p8 running_filename: /Users/andre/pico/games/oso/main.lua.p8 running_cart_lid: 
-[5114791] run_cart current_filename: /Users/andre/pico/games/oso/main.lua.p8 running_filename: /Users/andre/pico/games/oso/main.lua.p8 running_cart_lid: 
-[5138594] run_cart current_filename: /Users/andre/pico/games/oso/main.lua.p8 running_filename: /Users/andre/pico/games/oso/main.lua.p8 running_cart_lid: 
-[5157406] run_cart current_filename: /Users/andre/pico/games/oso/main.lua.p8 running_filename: /Users/andre/pico/games/oso/main.lua.p8 running_cart_lid: 
-[5180193] run_cart current_filename: /Users/andre/pico/games/oso/main.lua.p8 running_filename: /Users/andre/pico/games/oso/main.lua.p8 running_cart_lid: 
-[5184106] run_cart current_filename: /Users/andre/pico/games/oso/main.lua.p8 running_filename: /Users/andre/pico/games/oso/main.lua.p8 running_cart_lid: 
-[5223900] run_cart current_filename: /Users/andre/pico/games/oso/main.lua.p8 running_filename: /Users/andre/pico/games/oso/main.lua.p8 running_cart_lid: 
-[5232036] run_cart current_filename: /Users/andre/pico/games/oso/main.lua.p8 running_filename: /Users/andre/pico/games/oso/main.lua.p8 running_cart_lid: 
-[5234949] run_cart current_filename: /Users/andre/pico/games/oso/main.lua.p8 running_filename: /Users/andre/pico/games/oso/main.lua.p8 running_cart_lid: 
-[5273241] run_cart current_filename: /Users/andre/pico/games/oso/main.lua.p8 running_filename: /Users/andre/pico/games/oso/main.lua.p8 running_cart_lid: 
-[5299430] run_cart current_filename: /Users/andre/pico/games/oso/main.lua.p8 running_filename: /Users/andre/pico/games/oso/main.lua.p8 running_cart_lid: 
-[5302329] run_cart current_filename: /Users/andre/pico/games/oso/main.lua.p8 running_filename: /Users/andre/pico/games/oso/main.lua.p8 running_cart_lid: 
-[5307438] run_cart current_filename: /Users/andre/pico/games/oso/main.lua.p8 running_filename: /Users/andre/pico/games/oso/main.lua.p8 running_cart_lid: 
-[5356119] run_cart current_filename: /Users/andre/pico/games/oso/main.lua.p8 running_filename: /Users/andre/pico/games/oso/main.lua.p8 running_cart_lid: 
-[5393368] run_cart current_filename: /Users/andre/pico/games/oso/main.lua.p8 running_filename: /Users/andre/pico/games/oso/main.lua.p8 running_cart_lid: 
-[5409187] run_cart current_filename: /Users/andre/pico/games/oso/main.lua.p8 running_filename: /Users/andre/pico/games/oso/main.lua.p8 running_cart_lid: 
-[5439681] run_cart current_filename: /Users/andre/pico/games/oso/main.lua.p8 running_filename: /Users/andre/pico/games/oso/main.lua.p8 running_cart_lid: 
-[5472309] run_cart current_filename: /Users/andre/pico/games/oso/main.lua.p8 running_filename: /Users/andre/pico/games/oso/main.lua.p8 running_cart_lid: 
-[5961302] run_cart current_filename: /Users/andre/pico/games/oso/main.lua.p8 running_filename: /Users/andre/pico/games/oso/main.lua.p8 running_cart_lid: 
-[5970076] run_cart current_filename: /Users/andre/pico/games/oso/main.lua.p8 running_filename: /Users/andre/pico/games/oso/main.lua.p8 running_cart_lid: 
-[6026019] run_cart current_filename: /Users/andre/pico/games/oso/main.lua.p8 running_filename: /Users/andre/pico/games/oso/main.lua.p8 running_cart_lid: 
-[6065357] run_cart current_filename: /Users/andre/pico/games/oso/main.lua.p8 running_filename: /Users/andre/pico/games/oso/main.lua.p8 running_cart_lid: 
-[6103810] run_cart current_filename: /Users/andre/pico/games/oso/main.lua.p8 running_filename: /Users/andre/pico/games/oso/main.lua.p8 running_cart_lid: 
-[6107239] run_cart current_filename: /Users/andre/pico/games/oso/main.lua.p8 running_filename: /Users/andre/pico/games/oso/main.lua.p8 running_cart_lid: 
-[6303921] run_cart current_filename: /Users/andre/pico/games/oso/main.lua.p8 running_filename: /Users/andre/pico/games/oso/main.lua.p8 running_cart_lid: 
-[6314944] run_cart current_filename: /Users/andre/pico/games/oso/main.lua.p8 running_filename: /Users/andre/pico/games/oso/main.lua.p8 running_cart_lid: 
-[6326008] run_cart current_filename: /Users/andre/pico/games/oso/main.lua.p8 running_filename: /Users/andre/pico/games/oso/main.lua.p8 running_cart_lid: 
-[6376751] run_cart current_filename: /Users/andre/pico/games/oso/main.lua.p8 running_filename: /Users/andre/pico/games/oso/main.lua.p8 running_cart_lid: 
-[6418804] run_cart current_filename: /Users/andre/pico/games/oso/main.lua.p8 running_filename: /Users/andre/pico/games/oso/main.lua.p8 running_cart_lid: 
-[6480126] run_cart current_filename: /Users/andre/pico/games/oso/main.lua.p8 running_filename: /Users/andre/pico/games/oso/main.lua.p8 running_cart_lid: 
-[6503524] run_cart current_filename: /Users/andre/pico/games/oso/main.lua.p8 running_filename: /Users/andre/pico/games/oso/main.lua.p8 running_cart_lid: 
-[6595504] run_cart current_filename: /Users/andre/pico/games/oso/main.lua.p8 running_filename: /Users/andre/pico/games/oso/main.lua.p8 running_cart_lid: 
-[6637967] run_cart current_filename: /Users/andre/pico/games/oso/main.lua.p8 running_filename: /Users/andre/pico/games/oso/main.lua.p8 running_cart_lid: 
-[6655637] run_cart current_filename: /Users/andre/pico/games/oso/main.lua.p8 running_filename: /Users/andre/pico/games/oso/main.lua.p8 running_cart_lid: 
-[6668225] run_cart current_filename: /Users/andre/pico/games/oso/main.lua.p8 running_filename: /Users/andre/pico/games/oso/main.lua.p8 running_cart_lid: 
-[6717154] run_cart current_filename: /Users/andre/pico/games/oso/main.lua.p8 running_filename: /Users/andre/pico/games/oso/main.lua.p8 running_cart_lid: 
-[6742954] run_cart current_filename: /Users/andre/pico/games/oso/main.lua.p8 running_filename: /Users/andre/pico/games/oso/main.lua.p8 running_cart_lid: 
-[6761214] run_cart current_filename: /Users/andre/pico/games/oso/main.lua.p8 running_filename: /Users/andre/pico/games/oso/main.lua.p8 running_cart_lid: 
-[6774754] run_cart current_filename: /Users/andre/pico/games/oso/main.lua.p8 running_filename: /Users/andre/pico/games/oso/main.lua.p8 running_cart_lid: 
-[6903013] run_cart current_filename: /Users/andre/pico/games/oso/main.lua.p8 running_filename: /Users/andre/pico/games/oso/main.lua.p8 running_cart_lid: 
-[6947046] run_cart current_filename: /Users/andre/pico/games/oso/main.lua.p8 running_filename: /Users/andre/pico/games/oso/main.lua.p8 running_cart_lid: 
-[6972157] run_cart current_filename: /Users/andre/pico/games/oso/main.lua.p8 running_filename: /Users/andre/pico/games/oso/main.lua.p8 running_cart_lid: 
-[7006075] run_cart current_filename: /Users/andre/pico/games/oso/main.lua.p8 running_filename: /Users/andre/pico/games/oso/main.lua.p8 running_cart_lid: 
-[7040005] run_cart current_filename: /Users/andre/pico/games/oso/main.lua.p8 running_filename: /Users/andre/pico/games/oso/main.lua.p8 running_cart_lid: 
-[7083046] run_cart current_filename: /Users/andre/pico/games/oso/main.lua.p8 running_filename: /Users/andre/pico/games/oso/main.lua.p8 running_cart_lid: 
-[7119987] run_cart current_filename: /Users/andre/pico/games/oso/main.lua.p8 running_filename: /Users/andre/pico/games/oso/main.lua.p8 running_cart_lid: 
-[7152595] run_cart current_filename: /Users/andre/pico/games/oso/main.lua.p8 running_filename: /Users/andre/pico/games/oso/main.lua.p8 running_cart_lid: 
-[7181149] run_cart current_filename: /Users/andre/pico/games/oso/main.lua.p8 running_filename: /Users/andre/pico/games/oso/main.lua.p8 running_cart_lid: 
-[7319120] run_cart current_filename: /Users/andre/pico/games/oso/main.lua.p8 running_filename: /Users/andre/pico/games/oso/main.lua.p8 running_cart_lid: 
-[7452292] run_cart current_filename: /Users/andre/pico/games/oso/main.lua.p8 running_filename: /Users/andre/pico/games/oso/main.lua.p8 running_cart_lid: 
-[7548577] run_cart current_filename: /Users/andre/pico/games/oso/main.lua.p8 running_filename: /Users/andre/pico/games/oso/main.lua.p8 running_cart_lid: 
-[7561985] run_cart current_filename: /Users/andre/pico/games/oso/main.lua.p8 running_filename: /Users/andre/pico/games/oso/main.lua.p8 running_cart_lid: 
-[7608625] run_cart current_filename: /Users/andre/pico/games/oso/main.lua.p8 running_filename: /Users/andre/pico/games/oso/main.lua.p8 running_cart_lid: 
-[7620886] run_cart current_filename: /Users/andre/pico/games/oso/main.lua.p8 running_filename: /Users/andre/pico/games/oso/main.lua.p8 running_cart_lid: 
-[7924391] run_cart current_filename: /Users/andre/pico/games/oso/main.lua.p8 running_filename: /Users/andre/pico/games/oso/main.lua.p8 running_cart_lid: 
-[7934350] run_cart current_filename: /Users/andre/pico/games/oso/main.lua.p8 running_filename: /Users/andre/pico/games/oso/main.lua.p8 running_cart_lid: 
-[7943373] run_cart current_filename: /Users/andre/pico/games/oso/main.lua.p8 running_filename: /Users/andre/pico/games/oso/main.lua.p8 running_cart_lid: 
-[7974929] run_cart current_filename: /Users/andre/pico/games/oso/main.lua.p8 running_filename: /Users/andre/pico/games/oso/main.lua.p8 running_cart_lid: 
-[7981904] run_cart current_filename: /Users/andre/pico/games/oso/main.lua.p8 running_filename: /Users/andre/pico/games/oso/main.lua.p8 running_cart_lid: 
-[7991551] run_cart current_filename: /Users/andre/pico/games/oso/main.lua.p8 running_filename: /Users/andre/pico/games/oso/main.lua.p8 running_cart_lid: 
-[8065903] run_cart current_filename: /Users/andre/pico/games/oso/main.lua.p8 running_filename: /Users/andre/pico/games/oso/main.lua.p8 running_cart_lid: 
-[8116774] run_cart current_filename: /Users/andre/pico/games/oso/main.lua.p8 running_filename: /Users/andre/pico/games/oso/main.lua.p8 running_cart_lid: 
-[8129867] run_cart current_filename: /Users/andre/pico/games/oso/main.lua.p8 running_filename: /Users/andre/pico/games/oso/main.lua.p8 running_cart_lid: 
-[8197472] run_cart current_filename: /Users/andre/pico/games/oso/main.lua.p8 running_filename: /Users/andre/pico/games/oso/main.lua.p8 running_cart_lid: 
-[8774862] run_cart current_filename: /Users/andre/pico/games/oso/main.lua.p8 running_filename: /Users/andre/pico/games/oso/main.lua.p8 running_cart_lid: 
-[8786171] run_cart current_filename: /Users/andre/pico/games/oso/main.lua.p8 running_filename: /Users/andre/pico/games/oso/main.lua.p8 running_cart_lid: 
-[8913079] run_cart current_filename: /Users/andre/pico/games/oso/main.lua.p8 running_filename: /Users/andre/pico/games/oso/main.lua.p8 running_cart_lid: 
-[9052481] run_cart current_filename: /Users/andre/pico/games/oso/main.lua.p8 running_filename: /Users/andre/pico/games/oso/main.lua.p8 running_cart_lid: 
-[9079928] run_cart current_filename: /Users/andre/pico/games/oso/main.lua.p8 running_filename: /Users/andre/pico/games/oso/main.lua.p8 running_cart_lid: 
-[9097598] run_cart current_filename: /Users/andre/pico/games/oso/main.lua.p8 running_filename: /Users/andre/pico/games/oso/main.lua.p8 running_cart_lid: 
-[9110842] run_cart current_filename: /Users/andre/pico/games/oso/main.lua.p8 running_filename: /Users/andre/pico/games/oso/main.lua.p8 running_cart_lid: 
-[9121990] run_cart current_filename: /Users/andre/pico/games/oso/main.lua.p8 running_filename: /Users/andre/pico/games/oso/main.lua.p8 running_cart_lid: 
-[9134671] run_cart current_filename: /Users/andre/pico/games/oso/main.lua.p8 running_filename: /Users/andre/pico/games/oso/main.lua.p8 running_cart_lid: 
-[9149296] run_cart current_filename: /Users/andre/pico/games/oso/main.lua.p8 running_filename: /Users/andre/pico/games/oso/main.lua.p8 running_cart_lid: 
-[9165556] run_cart current_filename: /Users/andre/pico/games/oso/main.lua.p8 running_filename: /Users/andre/pico/games/oso/main.lua.p8 running_cart_lid: 
-[9177462] run_cart current_filename: /Users/andre/pico/games/oso/main.lua.p8 running_filename: /Users/andre/pico/games/oso/main.lua.p8 running_cart_lid: 
-[9207700] run_cart current_filename: /Users/andre/pico/games/oso/main.lua.p8 running_filename: /Users/andre/pico/games/oso/main.lua.p8 running_cart_lid: 
-[9232609] run_cart current_filename: /Users/andre/pico/games/oso/main.lua.p8 running_filename: /Users/andre/pico/games/oso/main.lua.p8 running_cart_lid: 
-[9251984] run_cart current_filename: /Users/andre/pico/games/oso/main.lua.p8 running_filename: /Users/andre/pico/games/oso/main.lua.p8 running_cart_lid: 
-[9262206] run_cart current_filename: /Users/andre/pico/games/oso/main.lua.p8 running_filename: /Users/andre/pico/games/oso/main.lua.p8 running_cart_lid: 
-[9263966] run_cart current_filename: /Users/andre/pico/games/oso/main.lua.p8 running_filename: /Users/andre/pico/games/oso/main.lua.p8 running_cart_lid: 
-[9277583] run_cart current_filename: /Users/andre/pico/games/oso/main.lua.p8 running_filename: /Users/andre/pico/games/oso/main.lua.p8 running_cart_lid: 
-[9299302] run_cart current_filename: /Users/andre/pico/games/oso/main.lua.p8 running_filename: /Users/andre/pico/games/oso/main.lua.p8 running_cart_lid: 
-[9332099] run_cart current_filename: /Users/andre/pico/games/oso/main.lua.p8 running_filename: /Users/andre/pico/games/oso/main.lua.p8 running_cart_lid: 
-[9357158] run_cart current_filename: /Users/andre/pico/games/oso/main.lua.p8 running_filename: /Users/andre/pico/games/oso/main.lua.p8 running_cart_lid: 
-[9362695] run_cart current_filename: /Users/andre/pico/games/oso/main.lua.p8 running_filename: /Users/andre/pico/games/oso/main.lua.p8 running_cart_lid: 
-[9383252] run_cart current_filename: /Users/andre/pico/games/oso/main.lua.p8 running_filename: /Users/andre/pico/games/oso/main.lua.p8 running_cart_lid: 
-[9455745] run_cart current_filename: /Users/andre/pico/games/oso/main.lua.p8 running_filename: /Users/andre/pico/games/oso/main.lua.p8 running_cart_lid: 
-[9473167] run_cart current_filename: /Users/andre/pico/games/oso/main.lua.p8 running_filename: /Users/andre/pico/games/oso/main.lua.p8 running_cart_lid: 
-[9493512] run_cart current_filename: /Users/andre/pico/games/oso/main.lua.p8 running_filename: /Users/andre/pico/games/oso/main.lua.p8 running_cart_lid: 
-[9587072] run_cart current_filename: /Users/andre/pico/games/oso/main.lua.p8 running_filename: /Users/andre/pico/games/oso/main.lua.p8 running_cart_lid: 
-[9602815] run_cart current_filename: /Users/andre/pico/games/oso/main.lua.p8 running_filename: /Users/andre/pico/games/oso/main.lua.p8 running_cart_lid: 
-[9618835] run_cart current_filename: /Users/andre/pico/games/oso/main.lua.p8 running_filename: /Users/andre/pico/games/oso/main.lua.p8 running_cart_lid: 
-[9646785] run_cart current_filename: /Users/andre/pico/games/oso/main.lua.p8 running_filename: /Users/andre/pico/games/oso/main.lua.p8 running_cart_lid: 
-[9719171] run_cart current_filename: /Users/andre/pico/games/oso/main.lua.p8 running_filename: /Users/andre/pico/games/oso/main.lua.p8 running_cart_lid: 
-[9732152] run_cart current_filename: /Users/andre/pico/games/oso/main.lua.p8 running_filename: /Users/andre/pico/games/oso/main.lua.p8 running_cart_lid: 
-[9789786] run_cart current_filename: /Users/andre/pico/games/oso/main.lua.p8 running_filename: /Users/andre/pico/games/oso/main.lua.p8 running_cart_lid: 
-[9835464] run_cart current_filename: /Users/andre/pico/games/oso/main.lua.p8 running_filename: /Users/andre/pico/games/oso/main.lua.p8 running_cart_lid: 
-[9860209] run_cart current_filename: /Users/andre/pico/games/oso/main.lua.p8 running_filename: /Users/andre/pico/games/oso/main.lua.p8 running_cart_lid: 
-[9899304] run_cart current_filename: /Users/andre/pico/games/oso/main.lua.p8 running_filename: /Users/andre/pico/games/oso/main.lua.p8 running_cart_lid: 
-[9902171] run_cart current_filename: /Users/andre/pico/games/oso/main.lua.p8 running_filename: /Users/andre/pico/games/oso/main.lua.p8 running_cart_lid: 
-[9934189] run_cart current_filename: /Users/andre/pico/games/oso/main.lua.p8 running_filename: /Users/andre/pico/games/oso/main.lua.p8 running_cart_lid: 
-[9946533] run_cart current_filename: /Users/andre/pico/games/oso/main.lua.p8 running_filename: /Users/andre/pico/games/oso/main.lua.p8 running_cart_lid: 
-[9955134] run_cart current_filename: /Users/andre/pico/games/oso/main.lua.p8 running_filename: /Users/andre/pico/games/oso/main.lua.p8 running_cart_lid: 
-[9964095] run_cart current_filename: /Users/andre/pico/games/oso/main.lua.p8 running_filename: /Users/andre/pico/games/oso/main.lua.p8 running_cart_lid: 
-[9966663] run_cart current_filename: /Users/andre/pico/games/oso/main.lua.p8 running_filename: /Users/andre/pico/games/oso/main.lua.p8 running_cart_lid: 
-[9993092] run_cart current_filename: /Users/andre/pico/games/oso/main.lua.p8 running_filename: /Users/andre/pico/games/oso/main.lua.p8 running_cart_lid: 
-[10009437] run_cart current_filename: /Users/andre/pico/games/oso/main.lua.p8 running_filename: /Users/andre/pico/games/oso/main.lua.p8 running_cart_lid: 
-[10024499] run_cart current_filename: /Users/andre/pico/games/oso/main.lua.p8 running_filename: /Users/andre/pico/games/oso/main.lua.p8 running_cart_lid: 
-[10027458] run_cart current_filename: /Users/andre/pico/games/oso/main.lua.p8 running_filename: /Users/andre/pico/games/oso/main.lua.p8 running_cart_lid: 
-[10046849] run_cart current_filename: /Users/andre/pico/games/oso/main.lua.p8 running_filename: /Users/andre/pico/games/oso/main.lua.p8 running_cart_lid: 
-[10080674] run_cart current_filename: /Users/andre/pico/games/oso/main.lua.p8 running_filename: /Users/andre/pico/games/oso/main.lua.p8 running_cart_lid: 
-[10111562] run_cart current_filename: /Users/andre/pico/games/oso/main.lua.p8 running_filename: /Users/andre/pico/games/oso/main.lua.p8 running_cart_lid: 
-[10151188] run_cart current_filename: /Users/andre/pico/games/oso/main.lua.p8 running_filename: /Users/andre/pico/games/oso/main.lua.p8 running_cart_lid: 
-[10184212] run_cart current_filename: /Users/andre/pico/games/oso/main.lua.p8 running_filename: /Users/andre/pico/games/oso/main.lua.p8 running_cart_lid: 
-[10189133] run_cart current_filename: /Users/andre/pico/games/oso/main.lua.p8 running_filename: /Users/andre/pico/games/oso/main.lua.p8 running_cart_lid: 
-[10203761] run_cart current_filename: /Users/andre/pico/games/oso/main.lua.p8 running_filename: /Users/andre/pico/games/oso/main.lua.p8 running_cart_lid: 
-[10206062] run_cart current_filename: /Users/andre/pico/games/oso/main.lua.p8 running_filename: /Users/andre/pico/games/oso/main.lua.p8 running_cart_lid: 
-[10260899] run_cart current_filename: /Users/andre/pico/games/oso/main.lua.p8 running_filename: /Users/andre/pico/games/oso/main.lua.p8 running_cart_lid: 
-[10347107] run_cart current_filename: /Users/andre/pico/games/oso/main.lua.p8 running_filename: /Users/andre/pico/games/oso/main.lua.p8 running_cart_lid: 
-[10362278] run_cart current_filename: /Users/andre/pico/games/oso/main.lua.p8 running_filename: /Users/andre/pico/games/oso/main.lua.p8 running_cart_lid: 
-[10495333] run_cart current_filename: /Users/andre/pico/games/oso/main.lua.p8 running_filename: /Users/andre/pico/games/oso/main.lua.p8 running_cart_lid: 
-[10510283] run_cart current_filename: /Users/andre/pico/games/oso/main.lua.p8 running_filename: /Users/andre/pico/games/oso/main.lua.p8 running_cart_lid: 
-[10603303] run_cart current_filename: /Users/andre/pico/games/oso/main.lua.p8 running_filename: /Users/andre/pico/games/oso/main.lua.p8 running_cart_lid: 
-[10619409] run_cart current_filename: /Users/andre/pico/games/oso/main.lua.p8 running_filename: /Users/andre/pico/games/oso/main.lua.p8 running_cart_lid: 
-[10690255] run_cart current_filename: /Users/andre/pico/games/oso/main.lua.p8 running_filename: /Users/andre/pico/games/oso/main.lua.p8 running_cart_lid: 
-[10691583] run_cart current_filename: /Users/andre/pico/games/oso/main.lua.p8 running_filename: /Users/andre/pico/games/oso/main.lua.p8 running_cart_lid: 
-[10720106] run_cart current_filename: /Users/andre/pico/games/oso/main.lua.p8 running_filename: /Users/andre/pico/games/oso/main.lua.p8 running_cart_lid: 
-[10747032] run_cart current_filename: /Users/andre/pico/games/oso/main.lua.p8 running_filename: /Users/andre/pico/games/oso/main.lua.p8 running_cart_lid: 
-[10846458] run_cart current_filename: /Users/andre/pico/games/oso/main.lua.p8 running_filename: /Users/andre/pico/games/oso/main.lua.p8 running_cart_lid: 
-[11268674] window closed (14)
-[11268678] codo_exit
-[11268678]   cmusic_stop
-[11268678]   codo_main_exit
-[11268680]   codo_config_save
-[11268682]   codo_sound_exit
-[11268682]   codo_video_exit
-[11268696]   codo_joystick_exit
-[11268696]   codo_system_exit
-[11268697]   codo_items_created: 1553
-[11268697] ok
+[000811] Built-in audio drivers: 0 coreaudio 1 disk 2 dummy
+[000811] Current audio driver: coreaudio
+[000811] splore_init
+[000812] could not load favourites file: /Users/andre/pico/games/oso/favourites.txt
+[002968] loading /Users/andre/pico/games/oso/main.lua.p8
+[004650] run_cart current_filename: /Users/andre/pico/games/oso/main.lua.p8 running_filename: /Users/andre/pico/games/oso/main.lua.p8 running_cart_lid: 
+[018638] window closed (14)
+[018638] codo_exit
+[018638]   cmusic_stop
+[018638]   codo_main_exit
+[018640]   codo_config_save
+[018642]   codo_sound_exit
+[018642]   codo_video_exit
+[018658]   codo_joystick_exit
+[018658]   codo_system_exit
+[018658]   codo_items_created: 1291
+[018658] ok

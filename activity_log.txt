@@ -288,3 +288,5 @@
  rrrrrrrrrrrrrrrrrrri...iccccccci.cccccccccccccccccrrrrrrrrrrrrrrrrriiiccimmmccct
  mgcmmirrrrrrrrrrrrrgccccccccmgggggrrrrrrrrgcrrrrrrrccrrrrrrrrrccii.........cccmc
  rrrrrrrrrcc.........cc
+2023-07-04 22:21:57 /Users/andre/pico/games/oso/main.lua.p8
+ rrrri
