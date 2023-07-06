@@ -44,9 +44,13 @@ function make_actor(k, x, y)
 	return a
 end
 
-function _init()
+function _init(has_key)
  actor={}
-	start_game()
+ if has_key==true then
+	 start_game(true)
+	else
+	 start_game(false)
+	end
  spawn_npcs()
  spawn_enemies()
 	pl = make_actor(1,10,10)
@@ -167,7 +171,9 @@ function move_actor(a)
 	end
 	
 	if warp_a(a, a.dy, 0) and a.role=="protag" then
-		each(actor, delete_all_bullets)
+		if a!=nil then
+		 foreach(actor, delete_all_bullets)
+		end
 		if game.frames.x == 8 and game.frames.y == 1 then
 		  pl.x = 25
 	   pl.y = 22
@@ -271,13 +277,21 @@ function _update()
 	 pl.bigsprite=true
 	end
 	foreach(actor, track_bullet)
-	if game.malfin_dead then
+	if game.malfin_dead and game.palo_divino==false then
+		del(actor, malfin_bullet)
+ 	del(actor, malfin_bullet_2)
+	 del(actor, malfin_bullet_3)
+	 del(actor, chidori)
 	 palo_divino=make_actor(206,104,6)
 	 palo_divino.bigsprite=true
+	 palo_divino.name="palo divino"
+	 palo_divino.can_move="false"
 	 malfin.k=112
 	 malfin.chiquitillo=true
 	 malfin.bigsprite=false
 	 malfin.biggersprite=false
+	 game.palo_divino=true
+	 sfx(14)
 	end
 end
 
@@ -320,8 +334,12 @@ end
 
 function _draw()
 	cls()
-	debug.active=true
-	--debug.message="swimming" ..tostr(game.swimming_on)
+	if game.game_e==true then
+	 game.frames.x=1
+	 game.frames.y=1
+	 centertext_wo("you finished the game",5,7)
+	 return nil
+	end
 	room_x=flr(pl.x/16)
 	room_y=flr(pl.y/16)
 	camera(room_x*128,room_y*128)
@@ -361,17 +379,26 @@ function game_over()
  else
    rect(128*(game.frames.x-1),0,128*(game.frames.x-1)+127, 127, 8)
  end
-	centertext(game.message,8)
+	centertext(game.message,8) 
 	if game.over_sound == false then
 	 sfx(3)
 	 game.over_sound = true
 	end
 	game.can_move=false
+		if btn(4) or btn(❎) then
+	 _init(game.has_key)
+	end
+end
+
+function centertext_wo(txt,offset,clr)
+ x_text = 64-#txt*2
+ y_text = 126+61+offset
+ print(txt,x_text,y_text,clr)
 end
 -->8
 -- utils
 
-function start_game()
+function start_game(_has_key)
  clock = 1
  state = "active"
 	debug = {
@@ -380,12 +407,17 @@ function start_game()
 	 warning=false,
 	 frames=false
 	}
+	endings={}
+	endings.oso={"oso descrubre la verdad", "oculta, usa su poder para", "destruir a las corporaciones", "y salvar al mundo"}
+	endings.gaturri={"gaturri toma el poder", "del palo divino", "para su beneficion propio", "un genocidio es inminente"}
+	endings.lechu={"lechu se come el palo", "divino, no sucede mayor", "cosa..."}
+	endings.viento={"viento no entiende nada", "acerca de nada", "se pone a llorar", "hasta que su dueno lo recoja"}
 	game = {
 	 floater_on=false,
 	 has_balsa=false,
 	 red_chidori=true,
 	 malfin_dead=false,
-	 has_key=true,
+	 has_key=_has_key,
 	 swimming_on=false,
 	 super_move=false,
 	 talking=false,
@@ -396,7 +428,9 @@ function start_game()
 	 state="active",
 	 message="",
 	 can_move=true,
-	 shooting_area=false
+	 shooting_area=false,
+	 palo_divino=false,
+	 game_e=false
 	}
 	animations = {
 	 x_btn = {5,6,7,6}
@@ -487,12 +521,16 @@ function button_events()
  end
  if btnp(04) then
   if pl.name=="gaturri" then
+   sfx(13)
    if game.red_chidori==true then
     sp=172
     _x=0.7
    else
     sp=140
     _x=0.4
+   end
+   if btn(04) and btn(➡️) then
+    _x=0-_x
    end
    chidori=make_actor(sp,pl.x,pl.y)
 	  chidori.name="chidori"
@@ -808,11 +846,25 @@ function collide_event(a1,a2)
  if a1.role=="protag" and a2.name=="tabash" and a2.talk_count > 1 then
   game.dialog_msg=a2.dialog_2
  end
+ if a1.role=="protag" and a2.name=="palo divino" then
+  game.game_e=true
+ end
  if a1.role=="protag" and a2.name=="andre" and a2.talk_count > 1 then
+  game.dialog_msg=a2.dialog_2
+ end
+ if a1.role=="protag" and 
+ a2.name=="malfin" and 
+ a2.bigsprite==false and 
+ a2.biggersprite==false and
+ a1.name=="oso" then
   game.dialog_msg=a2.dialog_2
  end
  if a1.role=="protag" and a2.name=="fuan" and a2.talk_count > 7 then
   game.dialog_msg=a2.dialog_2
+ end
+ if a1.role=="protag" and a1.name==pl.name and a2.name=="malfin_bullet" then
+  game.state="lost"
+		game.message="estas muerto"
  end
  if a1.role=="protag" and a2.name=="naranita" and a2.talk_count > 1 then
   game.dialog_msg=a2.dialog_2
@@ -841,7 +893,7 @@ function collide_event(a1,a2)
   end
  end
  if a1.role=="protag" and a2.name=="casa" and a2.talk_count > 1 then
-  _init()
+  _init(game.has_key)
  end
  if a1.role=="protag" and a2.name=="passage" and a1.name=="gaturri" then
   game.super_move=true
@@ -850,8 +902,17 @@ function collide_event(a1,a2)
   game.frames.x=1
   game.frames.y=3
  end
- if a1.name=="chidori" and a2.name !=pl.name and a2.name!="malfin" then
-  del(actor,a2)
+ if a1.name=="chidori" and 
+ a2.name !=pl.name and 
+ a2.name!="malfin" and 
+ a2.name!="palo divino" then
+  if a2.k!=129 and a2.k!=144 and a2.k!=89 then
+   del(actor,a1)
+   del(actor,a2)
+  end
+  if a2.k==107 then
+   del(actor,a1)
+  end
  end
  if a1.name=="chidori" and a2.name !=pl.name and game.red_chidori==true then
   if (a2.name=="malfin") then
@@ -958,6 +1019,15 @@ end
 function includes(el, arr)
  for i=1,#arr do
   if el.k==arr[i] then
+   return true
+  end
+ end
+ return false
+end
+
+function includes_raw(el, arr)
+ for i=1,#arr do
+  if el==arr[i] then
    return true
   end
  end
@@ -1191,9 +1261,9 @@ function spawn_enemies()
 	malfin.sound=10
 	malfin.dx=-0.1
 	malfin.dy=-0.2
-	malfin.bounce=0.8
+	malfin.bounce=1
 	malfin.dialog={"█★e⬇️♪gat⬅️ !", "sed😐♪웃⌂🐱ˇ", "ˇ웃♥●웃muert█@##!", "$%^▤no●█!!!"}
- malfin.special_dialog_2={"..no dejes que gaturri", "ahhl", "tome el poder", "..sagrado..", "lo a ●♥⬆️⬆️", "⬇️░★⧗⬆️", "⬇️░★⧗➡️⬆️destruccion", "..si", "malparido", "...", "mae", "me deje", "...", ".!"}
+ malfin.dialog_2={"..no dejes que gaturri", "ahhl", "tome el poder", "..sagrado..", "lo a ●♥⬆️⬆️", "⬇️░★⧗⬆️", "⬇️░★⧗➡️⬆️destruccion", "..si", "malparido", "...", "mae", "me deje", "...", ".!"}
 	
 	-- bouncy ball 2 sea 1
 	shark = make_actor(33,72,27)
@@ -1415,6 +1485,14 @@ function track_bullet(a)
    if flr(a.x)>(pl.x+9) or flr(a.x)<(pl.x-5) or
       flr(a.y)>(pl.y+9) or flr(a.y)<(pl.y-5) then
     del(actor,a)
+   end
+  end
+  if a.name=="malfin" then
+   if flr(a.x)>10 or flr(a.x)<4 then
+    a.x=102.5
+   end
+   if flr(a.y)>10 or flr(a.y)<4 then
+    a.y=7
    end
   end
  end
@@ -1767,8 +1845,8 @@ __sfx__
 0005000000600006002b25000600192500c6500d6500f650184501465017650196501b65028250092501f65000600206502f25020650006002065025450006001865029250176501b65000600006000060000600
 000300000000000000082500b25011250182501f25026250332502025024250253502035016250153500a25011250002500935008250190201202011020110200000000000000000000000000000000000000000
 001000001915019150191500000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000
-001000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000
-001000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000
+00020000005000050000500005000050000500005000050000500005001b5502055025550295502e5500050000500005000050000500005000050000500005000050000500005000050000500005000050000500
+0003000009050090500a0200b0200c0500e020110500b050130500d01016050190501b0201d0301f01020050295502a55023050240102e5502d010280502f0103552023020360202b020390203b0103e5103e750
 001000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000
 001000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000
 001000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000
