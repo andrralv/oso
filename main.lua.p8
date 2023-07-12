@@ -1204,12 +1204,15 @@ function spawn_npcs()
 	oso.can_talk=true
 	oso.dialog={"oso", "-3 energia", "skill: ???"}
 	
-	--rock1=make_actor(35,30.5,18.5)
-	rock2=make_actor(35,30.5,19.5)
-	rock3=make_actor(35,30.5,20.5)
- --rock1.can_move=false
-	rock2.can_move=false
-	rock3.can_move=false
+	-- fix
+	if game.has_key then
+	 rock1=make_actor(35,30.5,18.5)
+	 rock2=make_actor(35,30.5,19.5)
+	 rock3=make_actor(35,30.5,20.5)
+  rock1.can_move=false
+	 rock2.can_move=false
+	 rock3.can_move=false
+	end
 		
 	-- floater
 	floater = make_actor(69,41.5,28.5) 
@@ -1479,13 +1482,13 @@ function track_bullet(a)
   end
   if a.name=="chidori" then
   if game.red_chidori==true then
-   if flr(a.x)>(pl.x+9) or flr(a.x)<(pl.x-8) or
+   if flr(a.x)>(pl.x+9) or flr(a.x)<(pl.x-10) or
       flr(a.y)>(pl.y+9) or flr(a.y)<(pl.y-8) then
     del(actor,a)
    end
   else
-   if flr(a.x)>(pl.x+9) or flr(a.x)<(pl.x-5) or
-      flr(a.y)>(pl.y+9) or flr(a.y)<(pl.y-5) then
+   if flr(a.x)>(pl.x+6) or flr(a.x)<(pl.x-8) or
+      flr(a.y)>(pl.y+6) or flr(a.y)<(pl.y-6) then
     del(actor,a)
    end
   end
