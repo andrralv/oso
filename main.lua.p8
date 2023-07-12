@@ -398,7 +398,7 @@ end
 -->8
 -- utils
 
-function start_game(_has_key)
+function start_game()
  clock = 1
  state = "active"
 	debug = {
@@ -417,7 +417,7 @@ function start_game(_has_key)
 	 has_balsa=false,
 	 red_chidori=true,
 	 malfin_dead=false,
-	 has_key=_has_key,
+	 has_key=true,
 	 swimming_on=false,
 	 super_move=false,
 	 talking=false,
@@ -522,21 +522,23 @@ function button_events()
  if btnp(04) then
   if pl.name=="gaturri" then
    sfx(13)
+   _x=1
    if game.red_chidori==true then
     sp=172
-    _x=0.7
+    _dx=0.7
    else
     sp=140
-    _x=0.4
+    _dx=0.4
    end
-   if btn(04) and btn(➡️) then
-    _x=0-_x
+   if pl.flipped==true then
+    _dx=_dx*-1
+    _x=-1
    end
-   chidori=make_actor(sp,pl.x,pl.y)
+   chidori=make_actor(sp,pl.x+_x,pl.y)
 	  chidori.name="chidori"
 	  chidori.bigsprite=true
 	  chidori.friction=0
-	  chidori.dx=_x
+	  chidori.dx=_dx
 	  chidori.dy=0
   end
  end
